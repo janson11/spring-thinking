@@ -42,3 +42,14 @@ spring-expression:Spring表达式语言模块。
 
 3、Spring Framework的优势和不足是什么？
 这个答案将贯穿整个Spring系列。
+
+传统Ioc容器的实现
+Java Beans作为IoC容器
+特性：
+依赖查找
+生命周期管理
+配置元信息
+事件
+自定义
+资源管理
+持久化
