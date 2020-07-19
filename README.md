@@ -74,3 +74,14 @@ Java Beans作为IoC容器
 持久化
 
 
+Spring IoC依赖查找
+根据Bean的名称查找
+    实时查找
+    延迟查找
+根据Bean类型查找
+ 单个Bean对象
+ 集合Bean对象
+ 根据Bean名称+类型查找
+ 根据Java注解查找
+ 单个Bean对象
+ 集合Bean对象
