@@ -1,6 +1,5 @@
 package org.janson.think.in.spring.ioc.overview.dependency.injection;
 
-import org.janson.think.in.spring.ioc.overview.domain.User;
 import org.janson.think.in.spring.ioc.overview.repository.UserRepository;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
@@ -29,10 +28,20 @@ public class DependencyInjectionDemo {
 //        System.out.println(beanFactory.getBean(BeanFactory.class));
         //  容器内建 Bean
         Environment environment = beanFactory.getBean(Environment.class);
-        System.out.println("获取Environment类型的Bean:"+environment);
+        System.out.println("获取Environment类型的Bean:" + environment);
         ObjectFactory<ApplicationContext> userObjectFactory = userRepository.getObjectFactory();
-        System.out.println(userObjectFactory.getObject()==beanFactory);
+        System.out.println(userObjectFactory.getObject() == beanFactory);
+        whoIsIoCContainer(userRepository, beanFactory);
+    }
 
+    /**
+     * 谁是真正的IoC容器
+     *
+     * @param userRepository
+     * @param beanFactory
+     */
+    private static void whoIsIoCContainer(UserRepository userRepository, BeanFactory beanFactory) {
+        System.out.println(userRepository.getBeanFactory() == beanFactory);
     }
 
 
