@@ -22,6 +22,7 @@ public class AnnotationApplicationContextAsIoCContainerDemo {
         AnnotationConfigApplicationContext beanFactory = new AnnotationConfigApplicationContext();
         //将当前类AnnotationApplicationContextAsIoCContainerDemo作为配置类
         beanFactory.register(AnnotationApplicationContextAsIoCContainerDemo.class);
+        // 启动上下文
         beanFactory.refresh();
 
         // 加载配置
@@ -30,6 +31,9 @@ public class AnnotationApplicationContextAsIoCContainerDemo {
 //        int beanDefinitionsCount = reader.loadBeanDefinitions(location);
 //        System.out.println("Bean定义加载的数量：" + beanDefinitionsCount);
         lookupCollectionByType(beanFactory);
+
+        // 关闭
+        beanFactory.close();
     }
 
     private static void lookupCollectionByType(BeanFactory beanFactory) {

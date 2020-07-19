@@ -141,3 +141,11 @@ ApplicationContext除了IoC容器角色，还有提供:
 - 国际化（i18n）
 - 注解（Annotations）
 - Environment抽奖(Environment Abstraction)
+
+
+
+### Spring IoC容器生命周期
+
+- 启动
+- 运行
+- 停止
