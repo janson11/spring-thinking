@@ -97,3 +97,9 @@ Spring IoC依赖查找
   注入类型
   实时注入
   延迟注入
+  
+  Spring IoC依赖来源
+  自定义Bean
+  容器内建的Bean对象
+  容器内建依赖
+  
