@@ -124,3 +124,10 @@ JavaBeans、Servlet是IoC容器的实现。
   - 基于Java API
 - 外部化属性配置
   -  基于Java注解
+
+### Spring IoC容器
+BeanFactory和ApplicationContext谁才是Spring IoC容器?
+BeanFactory是一个底层的IoC容器，提供一些配置框架并且提供一些基本特性。
+ApplicationContext是在BeanFactory基础上增加了一些它的特性，提供更多企业级特性的功能。ApplicationContext是对BeanFactory的一个超集。
+BeanFactory含有的所有能力，ApplicationContext全都有并且提供更多的特性（aop的支持，国际化，事件发布等）。
+
