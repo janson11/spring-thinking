@@ -171,6 +171,12 @@ ApplicationContext除了IoC容器角色，还有提供:
 
 - BeanDefinition元信息
 
+  BeanDefinition构建
+
+  ​	通过BeanDefinitionBuilder
+
+  ​    通过AbstractBeanDefinition以及派生类
+
 - 命名Spring Bean
 
 - Spring Bean的别名
