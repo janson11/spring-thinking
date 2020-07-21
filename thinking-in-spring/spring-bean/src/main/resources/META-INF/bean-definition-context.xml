@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--通过导入复用dependency-lookup-context.xml-->
+    <import resource="classpath:/META-INF/dependency-lookup-context.xml"/>
+    <!--将Spring容器中的user bean建立别名janson-user-->
+    <alias name="user" alias="janson-user"/>
+</beans>

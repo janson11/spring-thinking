@@ -179,7 +179,23 @@ ApplicationContext除了IoC容器角色，还有提供:
 
 - 命名Spring Bean
 
+   Bean的名称：
+
+   每个Bean拥有一个或多个标识符，这些标识符在Bean所在的容器必须是唯一的。通常，一个Bean仅有一个标识符，如果需要额外的，可考虑使用别名来扩充。（通过半角逗号，或者分号；）
+
+  Bean名称生成器BeanNameGenerator
+
+  默认通用的DefaultBeanNameGenerator实现
+
+  基于注解扫描的AnnotationBeanNameGenerator实现。 
+
 - Spring Bean的别名
+
+  Bean别名（Alias）的价值
+
+  复用现有的BeanDefinition
+
+  更具有场景化 的命名方法
 
 - 实例化Spring Bean
 
