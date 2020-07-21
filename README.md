@@ -144,8 +144,65 @@ ApplicationContext除了IoC容器角色，还有提供:
 
 
 
+
+
+
 ### Spring IoC容器生命周期
 
 - 启动
 - 运行
 - 停止
+
+
+
+### Spring Bean基础
+
+- 定义Spring Bean：
+
+  什么是BeanDefinition？
+
+  ```
+  BeanDefinition是Spring Framework中定义Bean的配置元信息接口，包含：
+  Bean的类名
+  Bean的行为配置元素，如作用域、自动绑定的模式、生命周期的回调等
+  其他Bean的引用，又可称作合作者(Collaborators)或者依赖（Dependencies）
+  配置设置，比如Bean属性（Properties）
+  ```
+
+- BeanDefinition元信息
+
+- 命名Spring Bean
+
+- Spring Bean的别名
+
+- 实例化Spring Bean
+
+- 初始化Spring Bean
+
+- 延迟初始化Spring Bean
+
+- 销毁Spring Bean
+
+- 垃圾回收 Spring Bean
+
+- 面试题精选
+
+
+
+### 注册Spring Bean
+
+- BeanDefinition注册
+
+  -  XML配置元信息：<bean name="" />
+
+  - Java注解配置元信息：@Bean @Component @import
+
+  - Java API配置元信息：
+
+    命名方式：org.springframework.beans.factory.support.BeanDefinitionRegistry#registerBeanDefinition(String beanName, BeanDefinition beanDefinition)
+
+    非命名方式：	org.springframework.beans.factory.support.BeanDefinitionReaderUtils#registerWithGeneratedName(AbstractBeanDefinition definition, BeanDefinitionRegistry registry)
+    
+    配置类方式：
+    
+    org.springframework.context.annotation.AnnotatedBeanDefinitionReader#register(Class<?>... componentClasses)
