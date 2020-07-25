@@ -297,7 +297,21 @@ getBeansOfType(Class<T> type)以及重载方法
 
     
 
-    
 
-    
+### 延迟依赖查找
 
+- Bean延迟依赖查找接口
+
+  org.springframework.beans.factory.ObjectFactory
+
+  org.springframework.beans.factory.ObjectProvider
+
+  Spring 5 对Java8特性扩展
+
+  函数式接口
+
+  ```
+  getIfAvailable(Supplier<T> defaultSupplier) 
+  ifAvailable(Consumer<T> dependencyConsumer)
+  ```
+  Stream扩展-stream()

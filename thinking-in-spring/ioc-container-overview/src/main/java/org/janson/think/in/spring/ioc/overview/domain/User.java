@@ -15,4 +15,11 @@ import lombok.ToString;
 public class User {
     private Integer id;
     private String name;
+
+    public static User createUser() {
+        User user = new User();
+        user.setId(1);
+        user.setName("janson");
+        return user;
+    }
 }
