@@ -10,6 +10,7 @@
     <modules>
         <module>spring-bean</module>
         <module>ioc-container-overview</module>
+        <module>dependency-lookup</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -69,7 +70,6 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
         </dependency>
-
 
         <!--lombok plugin-->
         <dependency>

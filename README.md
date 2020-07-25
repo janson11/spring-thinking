@@ -228,3 +228,26 @@ ApplicationContext除了IoC容器角色，还有提供:
     配置类方式：
     
     org.springframework.context.annotation.AnnotatedBeanDefinitionReader#register(Class<?>... componentClasses)
+
+
+
+### 单一类型依赖查找
+
+- 根据Bean名称查找
+
+  getBean(String)
+
+  Spring 2.5覆盖默认参数：getBean(String,Object...)
+  
+- 根据Bean类型查找
+  Bean实时查找
+  Spring 3.0 getBean(Class)
+  Spring 4.1 覆盖默认参数：getBean(Class,Object...)
+  Spring 5.1 Bean延迟查找
+  getBeanProvider(Class)
+  getBeanProvider(ResolvableType)
+  
+- 根据Bean名称+类型查找
+   getBean(String,Class)
+
+
