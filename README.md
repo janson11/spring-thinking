@@ -327,3 +327,31 @@ getBeansOfType(Class<T> type)以及重载方法
 |              | ObjectProvider#stream              | 是       |
 
 注意:层次性依赖查找的安全性取决于其扩展的单一或集合类型的BeanFactory接口。
+
+
+
+### 内建可查找的依赖
+
+- AbstractApplicationContext内建可查找的依赖
+
+| Bean名称                    | Bean实例                        | 使用场景               |
+| --------------------------- | ------------------------------- | ---------------------- |
+| environment                 | Environment对象                 | 外部化配置以及Profiles |
+| systemProperties            | java.util.Properties对象        | Java系统属性           |
+| systemEnvironment           | java.util.Map对象               | 操作系统环境变量       |
+| messageSource               | MessageSource对象               | 国际化方案·            |
+| lifecycleProcessor          | LifecycleProcessor对象          | Lifecycle Bean处理器   |
+| applicationEventMulticaster | ApplicationEventMulticaster对象 | Spring事件广播器       |
+
+- 注解驱动Spring应用上下文内建可查找的依赖（部分）
+
+  | Bean名称                                                     | Bean实例                                   | 使用场景                                            |
+  | ------------------------------------------------------------ | ------------------------------------------ | --------------------------------------------------- |
+  | org.springframework.context.annotation.<br />ConfigurationClassPostProcessor | ConfigurationClassPostProcessor对象        | 处理Spring配置类                                    |
+  | org.springframework.beans.factory.annotation.<br />AutowiredAnnotationBeanPostProcessor | AutowiredAnnotationBeanPostProcessor对象   | 处理@Autowired以及@Value注解                        |
+  | org.springframework.context.annotation.<br />CommonAnnotationBeanPostProcessor | CommonAnnotationBeanPostProcessor对象      | （条件激活）处理JSR-250注解，如@PostConstruct等     |
+  | org.springframework.context.event.<br />EventListenerMethodProcessor | EventListenerMethodProcessor对象           | 处理标注@EventListener注解的Spring事件监听方法      |
+  | org.springframework.context.event.<br />DefaultEventListenerFactory | DefaultEventListenerFactory对象            | @EventListener事件监听方法适配为ApplicationListener |
+  | org.springframework.orm.jpa.support.<br />PersistenceAnnotationBeanPostProcessor | PersistenceAnnotationBeanPostProcessor对象 | (条件激活)处理JPA注解场景                           |
+
+  
