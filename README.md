@@ -251,3 +251,28 @@ ApplicationContext除了IoC容器角色，还有提供:
    getBean(String,Class)
 
 
+
+
+
+
+
+### 集合类型依赖查找接口-ListableBeanFactory
+
+- 根据Bean名称查找
+
+  获取同类型Bean名称列表
+
+  getBeanNamesForType(Class<?> type);
+  Spring 4.2 覆盖默认参数：getBeanNamesForType(ResolvableType type)
+获取同类型Bean实例列表
+getBeansOfType(Class<T> type)以及重载方法
+
+- 通过注解类型查找
+  Spring 3.0获取标注类型Bean名称列表
+  getBeanNamesForAnnotation(Class<? extends Annotation> annotationType)
+  
+  Spring 3.0获取标注类型Bean实例列表
+  getBeansWithAnnotation(Class<? extends Annotation> annotationType) 
+
+  Spring 3.0获取指定名称+标注类型实例
+  findAnnotationOnBean(String beanName, Class<A> annotationType)
