@@ -276,3 +276,28 @@ getBeansOfType(Class<T> type)以及重载方法
 
   Spring 3.0获取指定名称+标注类型实例
   findAnnotationOnBean(String beanName, Class<A> annotationType)
+
+### 层次性依赖查找接口-HierarchicalBeanFactory
+
+- 双亲BeanFactory：getParentBeanFactory()
+
+- 层次性查找
+
+  - 根据Bean名称查找
+
+    基于containsLocalBean方法实现
+
+  - 根据Bean类型查找实例列表
+
+    - 单一类型：BeanFactoryUtils#beanOfType
+    - 集合类型：BeanFactoryUtils#beansOfTypeIncludingAncestors
+
+  - 根据Java注解查找名称列表
+    BeanFactoryUtils#beanNamesForAnnotationIncludingAncestors
+
+    
+
+    
+
+    
+
