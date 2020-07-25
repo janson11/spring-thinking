@@ -27,41 +27,6 @@ OSGI Bundles
 Java 9 Automatic Modules
 Spring @Enable*
 
-### 面试题：
-1.什么是Spring Framework？
-Spring makes it easy to create Java enterprise applications.It provides everything you need to embrace the Java language in
-an enterprise environment,with support for Groovy and Kotlin as create many kinds od architectures depending on an application's needs.
-(Spring使得创建Java企业应用程序变得很容易。它提供了包含Java语言所需的企业环境，同时支持Groovy和Kotlin的，可以根据应用程序的需要创建多种架构。)
-
-2、Spring Framework有哪些核心模块？
-spring-core:Spring的基础API模块，如资源管理、泛型处理。
-spring-beans:Spring Bean相关，如依赖查找、依赖注入。
-spring-aop:Spring AOP处理，如动态处理，AOP字节码提升。
-spring-context:事件驱动、注解驱动、模块驱动。
-spring-expression:Spring表达式语言模块。
-
-3、Spring Framework的优势和不足是什么？
-这个答案将贯穿整个Spring系列。
-
-4、什么是IoC？
-简单的说，IoC是反转控制，类似与好莱坞原则，主要有依赖查找和依赖注入实现。
-JavaBeans、Servlet是IoC容器的实现。
-
-5、依赖查找和依赖注入的区别？
-依赖查找是主动或者手动的依赖查找方式，通常需要依赖容器或标准API实现。
-而依赖注入是手动或者自动依赖绑定的方式。无需依赖特定的容器和API。
-
-6、Spring作为IoC容器有什么优势？
-
-- 典型的IoC管理，依赖查找和依赖注入。
-- AOP抽象
-- 事务抽象
-- 事件机制
-- SPI扩展
-- 强大的第三方整合
-- 易测试性
-- 更好的面向对象
-
 ### 传统Ioc容器的实现
 
 - Java Beans作为IoC容器
@@ -362,7 +327,7 @@ getBeansOfType(Class<T> type)以及重载方法
 | ------------------------------- | --------------------------------------- | ---------------------------------------------- |
 | NoSuchBeanDefinitionException   | 当查找Bean不存在于IOC容器时             | BeanFactory#getBean<br />ObjectFactory#getBean |
 | NoUniqueBeanDefinitionException | 类型依赖查找时，IOC容器存在多个Bean实例 | BeanFactory#getBean(Class)                     |
-|                                 |                                         |                                                |
-|                                 |                                         |                                                |
-|                                 |                                         |                                                |
+| BeanInstantiationException      | 当Bean所对应的类型非具体类时            | BeanFactory#getBean                            |
+| BeanCreationException           | 当Bean初始化过程中                      | Bean初始化方法执行异常时                       |
+| BeanDefinitionStoreException    | 当BeanDefinition配置元信息非法时        | XML配置资源无法打开时                          |
 
