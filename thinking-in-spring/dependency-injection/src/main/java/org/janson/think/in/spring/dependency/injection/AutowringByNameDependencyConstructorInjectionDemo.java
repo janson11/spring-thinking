@@ -4,17 +4,17 @@ import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 
 /**
- * @Description: 基于XML 资源的Setter依赖注入示例
+ * @Description: Constructor 依赖注入构造器示例
  * @Author: Janson
- * @Date: 2020/7/26 16:01
+ * @Date: 2020/7/26 17:33
  **/
-public class XmlDependencySetterInjectionDemo {
+public class AutowringByNameDependencyConstructorInjectionDemo {
 
     public static void main(String[] args) {
         DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
 
         XmlBeanDefinitionReader beanDefinitionReader = new XmlBeanDefinitionReader(beanFactory);
-        String xmlResourcePath = "classpath:/META-INF/dependency-setter-injection.xml";
+        String xmlResourcePath = "classpath:/META-INF/autowiring-dependency-constructor-injection.xml";
         // 加载XML 资源解析并且生成BeanDefinition
         beanDefinitionReader.loadBeanDefinitions(xmlResourcePath);
         // 依赖查找并且创建Bean

@@ -6,7 +6,7 @@ import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * @Description: api方式
+ * @Description: 基于API方式实现依赖注入示例
  * @Author: Janson
  * @Date: 2020/7/26 16:25
  **/

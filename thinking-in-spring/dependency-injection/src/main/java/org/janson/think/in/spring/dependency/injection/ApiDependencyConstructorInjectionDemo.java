@@ -1,23 +1,25 @@
 package org.janson.think.in.spring.dependency.injection;
 
-import org.janson.think.in.spring.ioc.overview.domain.User;
+import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Bean;
 
 /**
- * @Description: 注解的Setter
+ * @Description: 基于API Constructor实现依赖注入
  * @Author: Janson
  * @Date: 2020/7/26 16:25
  **/
-public class AnnotationDependencySetterInjectionDemo {
+public class ApiDependencyConstructorInjectionDemo {
 
     public static void main(String[] args) {
         // 创建BeanFactory
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
 
-        // 注册Configuration Config (配置类)
-        applicationContext.register(AnnotationDependencySetterInjectionDemo.class);
+        // 注册 UserHolder的BeanDefinition
+        BeanDefinition userHolderBeanDefinition = createUserHolderBeanDefinition();
+        applicationContext.registerBeanDefinition("userHolder", userHolderBeanDefinition);
+
 
         XmlBeanDefinitionReader beanDefinitionReader = new XmlBeanDefinitionReader(applicationContext);
         String xmlResourcePath = "classpath:/META-INF/dependency-lookup-context.xml";
@@ -35,8 +37,14 @@ public class AnnotationDependencySetterInjectionDemo {
 
     }
 
+    private static BeanDefinition createUserHolderBeanDefinition() {
+        BeanDefinitionBuilder beanDefinitionBuilder = BeanDefinitionBuilder.genericBeanDefinition(UserHolder.class);
+        beanDefinitionBuilder.addConstructorArgReference("superUser");
+        return beanDefinitionBuilder.getBeanDefinition();
+    }
 
-    @Bean
+
+/*    @Bean
     public UserHolder userHolder(User user) {
         // setter 注入
         UserHolder userHolder = new UserHolder();
@@ -44,5 +52,5 @@ public class AnnotationDependencySetterInjectionDemo {
         return userHolder;
         // 构造器注入
 //        return new UserHolder(user);
-    }
+    }*/
 }

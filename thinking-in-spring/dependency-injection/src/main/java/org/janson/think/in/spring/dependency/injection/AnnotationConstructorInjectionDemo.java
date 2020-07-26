@@ -6,18 +6,18 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.Bean;
 
 /**
- * @Description: 注解的Setter
+ * @Description: 基于Constructo依赖注入示例
  * @Author: Janson
  * @Date: 2020/7/26 16:25
  **/
-public class AnnotationDependencySetterInjectionDemo {
+public class AnnotationConstructorInjectionDemo {
 
     public static void main(String[] args) {
         // 创建BeanFactory
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
 
         // 注册Configuration Config (配置类)
-        applicationContext.register(AnnotationDependencySetterInjectionDemo.class);
+        applicationContext.register(AnnotationConstructorInjectionDemo.class);
 
         XmlBeanDefinitionReader beanDefinitionReader = new XmlBeanDefinitionReader(applicationContext);
         String xmlResourcePath = "classpath:/META-INF/dependency-lookup-context.xml";
@@ -39,10 +39,10 @@ public class AnnotationDependencySetterInjectionDemo {
     @Bean
     public UserHolder userHolder(User user) {
         // setter 注入
-        UserHolder userHolder = new UserHolder();
+/*        UserHolder userHolder = new UserHolder();
         userHolder.setUser(user);
-        return userHolder;
+        return userHolder;*/
         // 构造器注入
-//        return new UserHolder(user);
+        return new UserHolder(user);
     }
 }
