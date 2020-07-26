@@ -353,6 +353,15 @@ getBeansOfType(Class<T> type)以及重载方法
 
 3. 自动绑定(Autowiring)模式
 
+   | 模式        | 说明                                                         |
+   | ----------- | ------------------------------------------------------------ |
+   | no          | 默认值，未激活Autowiring,需要手动指定依赖注入对象            |
+   | byName      | 根据被注入属性的名称作为Bean名称进行依赖查找，并将对象设置到该属性。 |
+   | byType      | 根据被注入属性的类型作为依赖类型进行查找，并将对象设置到该属性 |
+   | constructor | 特性byType类型，用于构造参数                                 |
+
+   备注：参考枚举类：org.springframework.beans.factory.annotation.Autowire
+
 4. 自动绑定(Autowiring)限制和不足
 
 5. Setter方法依赖注入
