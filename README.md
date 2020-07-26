@@ -366,6 +366,11 @@ getBeansOfType(Class<T> type)以及重载方法
 
 5. Setter方法依赖注入
 
+   实现方法：
+
+   - 手动模式:XML资源配置元信息、Java注解配置元信息和API配置元信息。
+   - 自动模式：byName和byType
+
 6. 构造器依赖注入
 
 7. 字段注入
