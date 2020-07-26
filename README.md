@@ -380,6 +380,12 @@ getBeansOfType(Class<T> type)以及重载方法
 
 7. 字段注入
 
+   手动模式：java注解配置元信息
+
+   - @Autowired
+   - @Resource
+   - @Inject(可选)
+
 8. 方法注入
 
 9. 回调注入
