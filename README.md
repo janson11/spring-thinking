@@ -444,6 +444,10 @@ getBeansOfType(Class<T> type)以及重载方法
 
 13. 限定注入
 
+    使用注解@Qualifier限定：通过Bean名称限定，通过分组限定
+
+    基于注解@Qualifier扩展限定，自定义注解：如Spring Cloud @LoadBalanced
+
 14. 延迟依赖注入
 
 15. 依赖处理过程

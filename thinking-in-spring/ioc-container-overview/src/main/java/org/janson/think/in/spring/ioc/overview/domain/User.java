@@ -17,7 +17,7 @@ import java.util.List;
 @Setter
 @ToString
 public class User {
-    private Integer id;
+    private Long id;
     private String name;
     private City city;
     private City[] workCities;
@@ -26,7 +26,7 @@ public class User {
 
     public static User createUser() {
         User user = new User();
-        user.setId(1);
+        user.setId(1L);
         user.setName("janson");
         return user;
     }

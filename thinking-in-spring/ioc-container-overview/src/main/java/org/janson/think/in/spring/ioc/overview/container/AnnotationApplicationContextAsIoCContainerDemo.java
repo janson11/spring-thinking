@@ -52,7 +52,7 @@ public class AnnotationApplicationContextAsIoCContainerDemo {
     @Bean
     public User user() {
         User user = new User();
-        user.setId(1);
+        user.setId(1L);
         user.setName("小花");
         return user;
     }
