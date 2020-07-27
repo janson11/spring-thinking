@@ -450,6 +450,10 @@ getBeansOfType(Class<T> type)以及重载方法
 
 14. 延迟依赖注入
 
+    使用API ObjectFactory延迟注入：单一类型、集合类型
+
+    使用API ObjectProvider延迟注入（推荐）：单一类型、集合类型
+
 15. 依赖处理过程
 
 16. @Autowired注入原理
