@@ -438,6 +438,10 @@ getBeansOfType(Class<T> type)以及重载方法
 
 12. 集合类型注入
 
+    数组类型（Array）：原生类型、标量类型、常规类型、Spring类型。
+
+    集合类型（Collection）：List、Set（SortedSet、NavigableSet、EnumSet） Map：Properties
+
 13. 限定注入
 
 14. 延迟依赖注入

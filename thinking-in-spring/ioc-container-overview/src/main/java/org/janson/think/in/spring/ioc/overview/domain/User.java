@@ -6,6 +6,8 @@ import lombok.ToString;
 import org.janson.think.in.spring.ioc.overview.enums.City;
 import org.springframework.core.io.Resource;
 
+import java.util.List;
+
 /**
  * @Description: 用户类
  * @Author: Janson
@@ -18,6 +20,8 @@ public class User {
     private Integer id;
     private String name;
     private City city;
+    private City[] workCities;
+    private List<City> lifeCities;
     private Resource configFileLocation;
 
     public static User createUser() {
