@@ -426,6 +426,16 @@ getBeansOfType(Class<T> type)以及重载方法
 
 11. 基础类型注入
 
+    基础类型:
+
+    原生类型(Primitive)：boolean、byte、char、short、int、float、long、double
+
+    标量类型(Scalar):Number、Character、Boolean、Enum、Locale、Charset、Currentcy、Properties、UUID
+
+    常规类型(General):Object、String、TimeZone、Calendar、Optional等
+
+    Spring类型：Resource、InputSource、Formatter等。
+
 12. 集合类型注入
 
 13. 限定注入
