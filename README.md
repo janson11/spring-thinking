@@ -456,6 +456,14 @@ getBeansOfType(Class<T> type)以及重载方法
 
 15. 依赖处理过程
 
+    基础知识：
+
+    入口：DefaultListableBeanFactory#resolveDependency
+
+    依赖描述：DependencyDescriptor
+
+    自动绑定候选对象处理器：AutowireCandidateResolver
+
 16. @Autowired注入原理
 
 17. JSR-330 @Inject注入原理
