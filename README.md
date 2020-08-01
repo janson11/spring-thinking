@@ -466,6 +466,8 @@ getBeansOfType(Class<T> type)以及重载方法
 
 16. @Autowired注入原理
 
+    @Autowired注入过程：元信息解析、依赖查找、依赖注入（字段、方法）
+
 17. JSR-330 @Inject注入原理
 
 18. Java通用注解注入原理

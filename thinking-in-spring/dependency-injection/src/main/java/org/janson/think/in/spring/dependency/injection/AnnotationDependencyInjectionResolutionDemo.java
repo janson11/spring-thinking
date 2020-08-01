@@ -4,6 +4,7 @@ import org.janson.think.in.spring.ioc.overview.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
 
 import java.util.Map;
@@ -14,6 +15,7 @@ import java.util.Optional;
  * @Author: Janson
  * @Date: 2020/7/27 20:11
  **/
+@Configuration
 public class AnnotationDependencyInjectionResolutionDemo {
 
 

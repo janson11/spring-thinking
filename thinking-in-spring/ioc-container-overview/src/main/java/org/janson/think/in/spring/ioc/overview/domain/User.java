@@ -1,7 +1,5 @@
 package org.janson.think.in.spring.ioc.overview.domain;
 
-import lombok.Getter;
-import lombok.Setter;
 import lombok.ToString;
 import org.janson.think.in.spring.ioc.overview.enums.City;
 import org.springframework.core.io.Resource;
@@ -13,8 +11,6 @@ import java.util.List;
  * @Author: Janson
  * @Date: 2020/7/19 12:47
  **/
-@Getter
-@Setter
 @ToString
 public class User {
     private Long id;
@@ -23,6 +19,54 @@ public class User {
     private City[] workCities;
     private List<City> lifeCities;
     private Resource configFileLocation;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public City getCity() {
+        return city;
+    }
+
+    public void setCity(City city) {
+        this.city = city;
+    }
+
+    public City[] getWorkCities() {
+        return workCities;
+    }
+
+    public void setWorkCities(City[] workCities) {
+        this.workCities = workCities;
+    }
+
+    public List<City> getLifeCities() {
+        return lifeCities;
+    }
+
+    public void setLifeCities(List<City> lifeCities) {
+        this.lifeCities = lifeCities;
+    }
+
+    public Resource getConfigFileLocation() {
+        return configFileLocation;
+    }
+
+    public void setConfigFileLocation(Resource configFileLocation) {
+        this.configFileLocation = configFileLocation;
+    }
 
     public static User createUser() {
         User user = new User();
