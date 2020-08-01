@@ -491,6 +491,22 @@ getBeansOfType(Class<T> type)以及重载方法
 
 19. 自定义依赖注入注解
 
+    基于AutowiredAnnotationBeanPostProcessor实现
+
+    自定义实现：
+
+    生命周期处理：
+
+      - InstantiationAwareBeanPostProcessorAdapter
+
+      - MergedBeanDefinitionPostProcessor
+
+    元数据
+      - InjectionMetadata
+      - InjectedElement
+
+      
+
 20. 面试题精选
 
 
