@@ -473,6 +473,21 @@ getBeansOfType(Class<T> type)以及重载方法
     如果JSR-330存在于ClassPath中，复用AutowiredAnnotationBeanPostProcessor实现。
 
 18. Java通用注解注入原理
+     CommonAnnotationBeanPostProcessor
+    
+    注入注解：
+    
+    - javax.xml.ws.WebServiceRef
+    
+    - javax.ejb.EJB
+    
+    - javax.annotation.Resource
+    
+    生命周期注解
+    - javax.annotation.PostConstruct
+    - javax.annotation.PreDestroy
+    
+
 
 19. 自定义依赖注入注解
 
