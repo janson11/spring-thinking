@@ -470,6 +470,8 @@ getBeansOfType(Class<T> type)以及重载方法
 
 17. JSR-330 @Inject注入原理
 
+    如果JSR-330存在于ClassPath中，复用AutowiredAnnotationBeanPostProcessor实现。
+
 18. Java通用注解注入原理
 
 19. 自定义依赖注入注解

@@ -7,6 +7,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
 
+import javax.inject.Inject;
 import java.util.Map;
 import java.util.Optional;
 
@@ -40,6 +41,9 @@ public class AnnotationDependencyInjectionResolutionDemo {
     @Autowired
     private Optional<Map<String, User>> userOptionals; // user  superUser
 
+    @Inject
+    private User injectedUser;
+
 
 
     public static void main(String[] args) {
@@ -61,6 +65,8 @@ public class AnnotationDependencyInjectionResolutionDemo {
 
         // 期待输出SuperUser
         System.out.println("demo.user= " + demo.user);
+        // 期待输出injectedUser
+        System.out.println("demo.injectedUser= " + demo.injectedUser);
         // 期待输出SuperUser
         System.out.println("demo.users= " + demo.users);
         // 期待输出SuperUser
