@@ -66,3 +66,18 @@ Setter注入：多依赖并且是非强制依赖的情况
 
 ### 11、Spring依赖注入的来源有哪些？
 
+Spring BeanDefinition
+
+单例对象
+
+Resolvable Dependency
+
+@Value 外部化配置
+
+### 12、注入和查找的依赖来源是否相同？
+
+否。依赖查找的来源仅限于Spring BeanDefinition以及单例对象，而依赖注入的来源还包括Resolvable Dependency以及@Value所标注的外部化配置。
+
+### 13、单例对象能在IoC容器启动后注册嘛？
+
+可以的，单例对象的注册与BeanDefinition不同，BeanDefinition会被org.springframework.beans.factory.config.ConfigurableListableBeanFactory#freezeConfiguration()方法影响，从而冻结注册，单例对象则没有这个限制。
