@@ -545,10 +545,24 @@ getBeansOfType(Class<T> type)以及重载方法
 
 2. 依赖注入的来源
 
+   | 来源                  | 配置元数据                                   |
+   | --------------------- | -------------------------------------------- |
+   | Spring BeanDefinition | <bean id="user" class="org.janson...User" /> |
+   |                       | @Bean public User user(){...}                |
+   |                       | BeanDefinitionBuilder                        |
+   | 单例对象              | API实现                                      |
+   | 非Spring容器管理对象  |                                              |
+
+   
+
 3. Spring容器管理和游离对象
+
 4. Spring BeanDefinition作为依赖来源
+
 5. 单例对象作为依赖来源
+
 6. 非Spring容器管理对象作为依赖来源
+
 7. 外部化配置作为依赖来源
 
 
