@@ -557,6 +557,16 @@ getBeansOfType(Class<T> type)以及重载方法
 
 3. Spring容器管理和游离对象
 
+   依赖对象
+
+   | 来源                  | Spring Bean对象 | 生命周期管理 | 配置元信息 | 使用场景           |
+   | --------------------- | --------------- | ------------ | ---------- | ------------------ |
+   | Spring BeanDefinition | 是              | 是           | 有         | 依赖查找、依赖注入 |
+   | 单体对象              | 是              | 否           | 无         | 依赖查找、依赖注入 |
+   | ResolvableDependency  | 否              | 否           | 无         | 依赖注入           |
+
+   
+
 4. Spring BeanDefinition作为依赖来源
 
 5. 单例对象作为依赖来源
