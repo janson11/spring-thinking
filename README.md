@@ -578,6 +578,16 @@ getBeansOfType(Class<T> type)以及重载方法
 
 5. 单例对象作为依赖来源
 
+   要素：
+
+   - 来源：外部普通Java对象（不一定是POJO）
+   - 注册：org.springframework.beans.factory.config.SingletonBeanRegistry#registerSingleton
+
+   限制：
+
+   - 无生命周期管理
+   - 无法实现延迟初始化Bean
+
 6. 非Spring容器管理对象作为依赖来源
 
 7. 外部化配置作为依赖来源
