@@ -569,6 +569,13 @@ getBeansOfType(Class<T> type)以及重载方法
 
 4. Spring BeanDefinition作为依赖来源
 
+   要素：
+
+   - 元数据：BeanDefinition
+   - 注册：org.springframework.beans.factory.support.BeanDefinitionRegistry#registerBeanDefinition
+   - 类型：延迟和非延迟
+   - 顺序：Bean生命周期顺序按照注册顺序
+
 5. 单例对象作为依赖来源
 
 6. 非Spring容器管理对象作为依赖来源
