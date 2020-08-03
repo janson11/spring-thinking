@@ -612,5 +612,31 @@ getBeansOfType(Class<T> type)以及重载方法
    - 无法实现延迟初始化Bean
    - 无法通依赖查找
 
+### Spring Bean作用域
 
+1. Spring Bean作用域
+
+   | 来源        | 说明                                                   |
+   | ----------- | ------------------------------------------------------ |
+   | singleton   | 默认Spring Bean作用域，一个BeanFactory有且仅有一个实例 |
+   | prototype   | 原型作用域，每次依赖查找和依赖注入生成新的Bean对象。   |
+   | request     | 将Spring Bean存储在ServletRequest上下文中              |
+   | session     | 将Spring Bean存储在HTTPSession                         |
+   | application | 将Spring Bean存储在ServletContext中                    |
+
+   
+
+2. "singleton" Bean作用域
+
+3. "prototype" Bean作用域
+
+4. "request" Bean作用域
+
+5. "session" Bean作用域
+
+6. "application" Bean作用域
+
+7. 自定义Bean作用域
+
+8. 课外资料
 
