@@ -628,6 +628,8 @@ getBeansOfType(Class<T> type)以及重载方法
 
 2. "singleton" Bean作用域
 
+   Only one instance is ever created
+
 3. "prototype" Bean作用域
 
 4. "request" Bean作用域
