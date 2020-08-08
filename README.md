@@ -650,6 +650,16 @@ getBeansOfType(Class<T> type)以及重载方法
 
 5. "session" Bean作用域 
 
+   配置：
+
+   XML -<bean class="..." scope="session" />
+
+   Java注解 - @SessionScope或@Scope(WebApplicationContext.SCOPE_SESSION)
+
+   实现：
+
+   API -SessionScope
+
 6. "application" Bean作用域
 
 7. 自定义Bean作用域

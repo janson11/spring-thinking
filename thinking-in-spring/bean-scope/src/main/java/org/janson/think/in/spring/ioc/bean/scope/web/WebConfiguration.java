@@ -4,6 +4,7 @@ import org.janson.think.in.spring.ioc.overview.domain.User;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.context.annotation.RequestScope;
+import org.springframework.web.context.annotation.SessionScope;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 /**
@@ -16,7 +17,8 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 public class WebConfiguration {
 
     @Bean
-    @RequestScope
+//    @RequestScope
+    @SessionScope
     public User user() {
         User user = new User();
         user.setId(1L);

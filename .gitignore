@@ -4,3 +4,4 @@ target/
 *.versionBackup
 *.class
 *.jar
+*.extract
