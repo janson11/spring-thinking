@@ -632,6 +632,10 @@ getBeansOfType(Class<T> type)以及重载方法
 
 3. "prototype" Bean作用域
 
+   A brand new bean instance is created
+
+   Spring 容器没有办法管理prototype Bean的完整生命周期，也没有办法记录实例的存在，销毁回调方法将不会执行，可以利用BeanPostProcessor进行清扫工作。
+
 4. "request" Bean作用域
 
 5. "session" Bean作用域
