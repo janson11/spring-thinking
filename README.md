@@ -638,7 +638,17 @@ getBeansOfType(Class<T> type)以及重载方法
 
 4. "request" Bean作用域
 
-5. "session" Bean作用域
+   配置：
+
+   XML -<bean class="..." scope="request" />
+
+   Java注解 - @RequestScope或@Scope(WebApplicationContext.SCOPE_REQUEST)
+
+   实现：
+
+   API -RequestScope
+
+5. "session" Bean作用域 
 
 6. "application" Bean作用域
 
