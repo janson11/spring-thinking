@@ -662,6 +662,16 @@ getBeansOfType(Class<T> type)以及重载方法
 
 6. "application" Bean作用域
 
+   配置：
+
+   XML -<bean class="..." scope="application" />
+
+   Java注解 - @ApplicationScope或@Scope(WebApplicationContext.SCOPE_APPLICATION)
+
+   实现：
+
+   API -ApplicationScope
+
 7. 自定义Bean作用域
 
 8. 课外资料
