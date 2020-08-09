@@ -720,6 +720,15 @@ getBeansOfType(Class<T> type)以及重载方法
 
 2. Spring Bean元信息解析阶段
 
+   面向资源BeanDefinition解析
+
+   - BeanDefinitionReader
+   - XML解析器-BeanDefinitionParser
+
+   面向注解BeanDefinition解析
+
+    - AnnotatedBeanDefinitionReader
+
 3. Spring Bean注册阶段
 
 4. Spring BeanDefinition合并阶段
