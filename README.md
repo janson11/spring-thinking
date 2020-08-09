@@ -697,3 +697,7 @@ getBeansOfType(Class<T> type)以及重载方法
 
 8. 课外资料
 
+   Spring Cloud RefreshScope是如何控制Bean的动态刷新？
+
+   自定义Scope：RefreshScope
+
