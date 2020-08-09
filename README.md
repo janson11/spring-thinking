@@ -672,7 +672,28 @@ getBeansOfType(Class<T> type)以及重载方法
 
    API -ApplicationScope
 
+   ![image-20200808214704446](C:\Users\janso\AppData\Roaming\Typora\typora-user-images\image-20200808214704446.png)
+
 7. 自定义Bean作用域
+
+   实现Scope：org.springframework.beans.factory.config.Scope
+
+   注册Scope：
+
+   - API：org.springframework.beans.factory.config.ConfigurableBeanFactory#registerScope
+
+   - 配置：
+
+     <bean class="org.springframework.beans.factory.config.CustomScopeConfigurer">
+
+     ​    <property names = "scopes">
+
+     			<map>
+     			    <entry keys="..."></entry>
+     			</map>
+     ​    </property>
+
+     </bean>
 
 8. 课外资料
 
