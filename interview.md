@@ -81,3 +81,17 @@ Resolvable Dependency
 ### 13、单例对象能在IoC容器启动后注册嘛？
 
 可以的，单例对象的注册与BeanDefinition不同，BeanDefinition会被org.springframework.beans.factory.config.ConfigurableListableBeanFactory#freezeConfiguration()方法影响，从而冻结注册，单例对象则没有这个限制。
+
+### 14、Spring内建的Bean作用域有几种?
+
+从设计模式：分为单例（singleton）和原生或原型（prototype）这两种方式。
+
+从Web角度：分为request（请求）、session（会话） .application（应用）和websocket这四种方式。
+
+### 15、singleton Bean是否在一个应用是唯一的？
+
+否。singleton bean 仅在当前Spring IOC容器(BeanFactory)中是单例对象。
+
+### 16、“application” Bean是否被其他方案替代？
+
+可以的，实际上，“application” Bean与“singleton” bean 没有本质区别。
