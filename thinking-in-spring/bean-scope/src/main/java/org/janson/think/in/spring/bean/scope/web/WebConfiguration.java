@@ -1,4 +1,4 @@
-package org.janson.think.in.spring.ioc.bean.scope.web;
+package org.janson.think.in.spring.bean.scope.web;
 
 import org.janson.think.in.spring.ioc.overview.domain.User;
 import org.springframework.context.annotation.Bean;

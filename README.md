@@ -701,3 +701,53 @@ getBeansOfType(Class<T> type)以及重载方法
 
    自定义Scope：RefreshScope
 
+
+
+## Spring Bean生命周期
+
+1. Spring Bean元信息配置阶段
+
+   BeanDefinition配置：
+
+   面向资源：
+
+   - XML配置
+   - Properties资源配置
+
+   面向注解：
+
+   面向API：
+
+2. Spring Bean元信息解析阶段
+
+3. Spring Bean注册阶段
+
+4. Spring BeanDefinition合并阶段
+
+5. Spring Bean Class加载阶段
+
+6. Spring Bean实例化前阶段
+
+7. Spring Bean 实例化阶段
+
+8. Spring Bean 实例化后阶段
+
+9. Spring Bean属性赋值前阶段
+
+10. Spring Bean Aware接口回调阶段
+
+11. Spring Bean初始化前阶段
+
+12. Spring Bean初始化阶段
+
+13. Spring Bean初始化后阶段
+
+14. Spring Bean初始化完成阶段
+
+15. Spring Bean销毁前阶段
+
+16. Spring Bean销毁阶段
+
+17. Spring Bean垃圾收集
+
+18. 面试题

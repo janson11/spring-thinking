@@ -1,4 +1,4 @@
-package org.janson.think.in.spring.ioc.bean.scope;
+package org.janson.think.in.spring.bean.scope;
 
 import org.janson.think.in.spring.ioc.overview.domain.User;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

@@ -1,4 +1,4 @@
-package org.janson.think.in.spring.ioc.bean.scope;
+package org.janson.think.in.spring.bean.scope;
 
 
 import org.springframework.beans.factory.ObjectFactory;

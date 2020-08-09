@@ -1,4 +1,4 @@
-package org.janson.think.in.spring.ioc.bean.scope.web.controller;
+package org.janson.think.in.spring.bean.scope.web.controller;
 
 import org.janson.think.in.spring.ioc.overview.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
