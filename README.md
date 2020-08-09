@@ -731,6 +731,8 @@ getBeansOfType(Class<T> type)以及重载方法
 
 3. Spring Bean注册阶段
 
+   BeanDefinition注册接口：BeanDefinitionRegistry
+
 4. Spring BeanDefinition合并阶段
 
 5. Spring Bean Class加载阶段
