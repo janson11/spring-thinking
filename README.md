@@ -750,6 +750,10 @@ getBeansOfType(Class<T> type)以及重载方法
 
 6. Spring Bean实例化前阶段
 
+   非主流生命周期—Bean实例化前阶段
+
+   org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor#postProcessBeforeInstantiation
+
 7. Spring Bean 实例化阶段
 
 8. Spring Bean 实例化后阶段
