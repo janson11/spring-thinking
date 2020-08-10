@@ -10,6 +10,9 @@
 <!--    <context:annotation-config/>
     <context:component-scan base-package="org.janson"/>-->
 
+    <!--Root BeanDefinition不需要合并 不存在parent-->
+    <!-- 普通BeanDefinition GenericBeanDefinition-->
+    <!--经过合并之后GenericBeanDefinition变成RootBeanDefinition-->
     <bean id="user" class="org.janson.think.in.spring.ioc.overview.domain.User">
         <property name="id" value="1"></property>
         <property name="name" value="小明"></property>
@@ -25,6 +28,9 @@
         </property>
     </bean>
 
+    <!-- 普通BeanDefinition GenericBeanDefinition-->
+    <!--合并后GenericBeanDefinition 变成RootBeanDefinition 并且覆盖parent相关配置-->
+    <!--primary =true  增加了一个address属性-->
     <bean id="superUser" class="org.janson.think.in.spring.ioc.overview.domain.SuperUser" parent="user" primary="true">
         <property name="address" value="深圳"></property>
     </bean>

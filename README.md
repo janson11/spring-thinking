@@ -729,11 +729,19 @@ getBeansOfType(Class<T> type)以及重载方法
 
     - AnnotatedBeanDefinitionReader
 
-3.  
-
-   BeanDefinition注册接口：BeanDefinitionRegistry
+3.  BeanDefinition注册接口：BeanDefinitionRegistry
 
 4. Spring BeanDefinition合并阶段
+
+   BeanDefinition合并：
+
+   父子BeanDefinition合并：
+
+   当前BeanFactory查找
+
+   层次性BeanFactory查找
+
+   
 
 5. Spring Bean Class加载阶段
 
