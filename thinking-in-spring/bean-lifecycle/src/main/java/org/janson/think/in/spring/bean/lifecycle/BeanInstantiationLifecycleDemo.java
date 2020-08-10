@@ -27,16 +27,17 @@ public class BeanInstantiationLifecycleDemo {
 
         // 加载Properties资源
         // 指定字符编码UTF-8
-        String location = "META-INF/dependency-lookup-context.xml";
-        Resource resource = new ClassPathResource(location);
-        EncodedResource encodedResource = new EncodedResource(resource, "UTF-8");
-        int beanNumbers = reader.loadBeanDefinitions(encodedResource);
+        String[] locations = {"META-INF/dependency-lookup-context.xml","META-INF/bean-constructor-dependency-injection.xml"};
+        int beanNumbers = reader.loadBeanDefinitions(locations);
         System.out.println("已加载 BeanDefinition数量：" + beanNumbers);
         User user = beanFactory.getBean("user", User.class);
         System.out.println(user);
 
         User superUser = beanFactory.getBean("superUser", User.class);
         System.out.println(superUser);
+        // 构造器注入按照类型注入，resolveDependency
+        UserHolder userHolder = beanFactory.getBean("userHolder", UserHolder.class);
+        System.out.println(userHolder);
 
     }
 

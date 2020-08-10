@@ -756,6 +756,14 @@ getBeansOfType(Class<T> type)以及重载方法
 
 7. Spring Bean 实例化阶段
 
+   实例化方式
+
+   - 传统实例化方式
+
+     实例化策略-InstantiationStrategy
+
+   - 构造器依赖注入
+
 8. Spring Bean 实例化后阶段
 
 9. Spring Bean属性赋值前阶段
