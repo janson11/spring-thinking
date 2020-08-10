@@ -741,9 +741,12 @@ getBeansOfType(Class<T> type)以及重载方法
 
    层次性BeanFactory查找
 
-   
-
 5. Spring Bean Class加载阶段
+   - ClassLoader类加载
+   
+   - Java Security安全控制
+   
+   - ConfigurableBeanFactory临时类加载ClassLoader
 
 6. Spring Bean实例化前阶段
 
