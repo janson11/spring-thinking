@@ -798,6 +798,11 @@ getBeansOfType(Class<T> type)以及重载方法
 
 11. Spring Bean初始化前阶段
 
+    - Bean实例化
+    - Bean属性赋值
+    - Bean Aware接口回调
+    - org.springframework.beans.factory.config.BeanPostProcessor#postProcessBeforeInitialization
+
 12. Spring Bean初始化阶段
 
 13. Spring Bean初始化后阶段
