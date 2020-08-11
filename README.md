@@ -766,6 +766,10 @@ getBeansOfType(Class<T> type)以及重载方法
 
 8. Spring Bean 实例化后阶段
 
+   Bean属性赋值(Populate)判断
+
+   org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor#postProcessAfterInstantiation
+
 9. Spring Bean属性赋值前阶段
 
 10. Spring Bean Aware接口回调阶段

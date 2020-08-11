@@ -6,9 +6,6 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
-import org.springframework.core.io.support.EncodedResource;
 import org.springframework.util.ObjectUtils;
 
 /**
@@ -27,7 +24,7 @@ public class BeanInstantiationLifecycleDemo {
 
         // 加载Properties资源
         // 指定字符编码UTF-8
-        String[] locations = {"META-INF/dependency-lookup-context.xml","META-INF/bean-constructor-dependency-injection.xml"};
+        String[] locations = {"META-INF/dependency-lookup-context.xml", "META-INF/bean-constructor-dependency-injection.xml"};
         int beanNumbers = reader.loadBeanDefinitions(locations);
         System.out.println("已加载 BeanDefinition数量：" + beanNumbers);
         User user = beanFactory.getBean("user", User.class);
@@ -48,6 +45,18 @@ public class BeanInstantiationLifecycleDemo {
                 // 把配置完成 superUser  Bean 覆盖
                 return new SuperUser();
             return null;
+        }
+
+        @Override
+        public boolean postProcessAfterInstantiation(Object bean, String beanName) throws BeansException {
+            if (ObjectUtils.nullSafeEquals("user", beanName) && User.class.equals(bean.getClass())) {
+                // user 对象不允许属性赋值(填入) (配置元信息—>属性值)
+                User user = (User) bean;
+                user.setId(2l);
+                user.setName("janson");
+                return false;
+            }
+            return true;
         }
     }
 }
