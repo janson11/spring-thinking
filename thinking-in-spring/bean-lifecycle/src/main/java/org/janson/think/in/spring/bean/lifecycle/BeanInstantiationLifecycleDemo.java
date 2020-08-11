@@ -8,6 +8,7 @@ import org.springframework.beans.PropertyValues;
 import org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.util.ObjectUtils;
 
 /**
@@ -18,10 +19,15 @@ import org.springframework.util.ObjectUtils;
 public class BeanInstantiationLifecycleDemo {
 
     public static void main(String[] args) {
-        DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
+        executeBeanFactory();
+        System.out.println("-------------------------------");
+        executeApplicationContext();
+    }
 
-        // 添加BeanPostProcessor实现
-        beanFactory.addBeanPostProcessor(new MyInstantiationAwareBeanPostProcessor());
+    public static void executeBeanFactory() {
+        DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
+        // 方法一：添加BeanPostProcessor实现 MyInstantiationAwareBeanPostProcessor
+        // 方法二：将MyInstantiationAwareBeanPostProcessor作为Bean注册
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
 
         // 加载Properties资源
@@ -38,55 +44,25 @@ public class BeanInstantiationLifecycleDemo {
         UserHolder userHolder = beanFactory.getBean("userHolder", UserHolder.class);
         System.out.println(userHolder);
 
+
     }
 
-    static class MyInstantiationAwareBeanPostProcessor implements InstantiationAwareBeanPostProcessor {
-        @Override
-        public Object postProcessBeforeInstantiation(Class<?> beanClass, String beanName) throws BeansException {
-            if (ObjectUtils.nullSafeEquals("superUser", beanName) && SuperUser.class.equals(beanClass))
-                // 把配置完成 superUser  Bean 覆盖
-                return new SuperUser();
-            return null;
-        }
+    public static void executeApplicationContext() {
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext();
+        String[] locations = {"META-INF/dependency-lookup-context.xml", "META-INF/bean-constructor-dependency-injection.xml"};
+        applicationContext.setConfigLocations(locations);
 
-        @Override
-        public boolean postProcessAfterInstantiation(Object bean, String beanName) throws BeansException {
-            if (ObjectUtils.nullSafeEquals("user", beanName) && User.class.equals(bean.getClass())) {
-                // user 对象不允许属性赋值(填入) (配置元信息—>属性值)
-                User user = (User) bean;
-                user.setId(2l);
-                user.setName("janson");
-                return false;
-            }
-            return true;
-        }
+        // 启动应用上下文
+        applicationContext.refresh();
+        User user = applicationContext.getBean("user", User.class);
+        System.out.println(user);
 
-        // user 是跳过Bean属性赋值(填入)
-        // superUsery也是完全跳过Bean实例化(Bean 属性值（填入）)
-        // userHolder
-        @Override
-        public PropertyValues postProcessProperties(PropertyValues pvs, Object bean, String beanName) throws BeansException {
-            // 对"userHolder" Bean进行拦截
-            if (ObjectUtils.nullSafeEquals("userHolder", beanName) && UserHolder.class.equals(bean.getClass())) {
-                // 假设<property name="number" value="1"></property>配置的话，那么在PropertyValues就包含一个PropertyValue。
-                final MutablePropertyValues propertyValues;
-                if (pvs instanceof MutablePropertyValues) {
-                    propertyValues = (MutablePropertyValues) pvs;
-                } else {
-                    propertyValues = new MutablePropertyValues();
-                }
-
-                // 如果存在的话就覆盖
-                if (propertyValues.contains("description")) {
-                    // propertyValue value是不可变的
-//                    PropertyValue propertyValue = propertyValues.getPropertyValue("description");
-                    propertyValues.removePropertyValue("description");
-                    propertyValues.addPropertyValue("description", "The User Holder V2");
-                }
-                propertyValues.addPropertyValue("number", "1");
-                return propertyValues;
-            }
-            return null;
-        }
+        User superUser = applicationContext.getBean("superUser", User.class);
+        System.out.println(superUser);
+        // 构造器注入按照类型注入，resolveDependency
+        UserHolder userHolder = applicationContext.getBean("userHolder", UserHolder.class);
+        System.out.println(userHolder);
+        // 关闭应用上下文
+        applicationContext.close();
     }
 }

@@ -780,9 +780,21 @@ getBeansOfType(Class<T> type)以及重载方法
    Bean属性赋值前回调
        Spring1.2-5.0：org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor#postProcessPropertyValues
 
-   ​    Spring5.1：org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor#postProcessProperties
+   ​    Spring5.1：org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor#postProcessProperties 
 
 10. Spring Bean Aware接口回调阶段
+
+    Spring Aware接口
+
+    - BeanNameAware
+    - BeanClassLoaderAware
+    - BeanFactoryAware
+    - EnvirinmentAware
+    - EmbeddedValueResolverAware
+    - ResourceLoaderAware
+    - ApplicationEventPublisherAware
+    - MessageSourceAware
+    - ApplicationContextAware
 
 11. Spring Bean初始化前阶段
 

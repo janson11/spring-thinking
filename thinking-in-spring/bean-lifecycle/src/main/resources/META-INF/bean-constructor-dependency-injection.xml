@@ -4,6 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        https://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean class="org.janson.think.in.spring.bean.lifecycle.MyInstantiationAwareBeanPostProcessor"></bean>
+
     <bean id="userHolder" class="org.janson.think.in.spring.bean.lifecycle.UserHolder" autowire="constructor">
         <!-- <property name="number" value="1"></property>-->
         <property name="description" value="The user holder"></property>
