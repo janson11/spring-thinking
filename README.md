@@ -831,6 +831,14 @@ getBeansOfType(Class<T> type)以及重载方法
 
 16. Spring Bean销毁阶段
 
+    Bean销毁(Destroy)
+
+    -    @PreDestory标注方法
+
+    - 实现DisposableBean接口的destroy()方法
+
+    - 自定义销毁方法
+
 17. Spring Bean垃圾收集
 
 18. 面试题

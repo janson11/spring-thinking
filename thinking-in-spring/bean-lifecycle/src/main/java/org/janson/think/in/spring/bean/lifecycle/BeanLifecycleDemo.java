@@ -17,10 +17,10 @@ public class BeanLifecycleDemo {
         // 方法一：添加BeanPostProcessor实现 MyInstantiationAwareBeanPostProcessor
         // 方法二：将MyInstantiationAwareBeanPostProcessor作为Bean注册
         beanFactory.addBeanPostProcessor(new MyInstantiationAwareBeanPostProcessor());
-        // 添加CommonAnnotationBeanPostProcessor解决@PostConstruct
-        beanFactory.addBeanPostProcessor(new CommonAnnotationBeanPostProcessor());
         // 添加MyDestructionAwareBeanPostProcessor 执行销毁前回调
         beanFactory.addBeanPostProcessor(new MyDestructionAwareBeanPostProcessor());
+        // 添加CommonAnnotationBeanPostProcessor解决@PostConstruct
+        beanFactory.addBeanPostProcessor(new CommonAnnotationBeanPostProcessor());
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
 
         // 加载Properties资源
