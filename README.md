@@ -813,6 +813,10 @@ getBeansOfType(Class<T> type)以及重载方法
 
 13. Spring Bean初始化后阶段
 
+    方法回调
+
+    org.springframework.beans.factory.config.BeanPostProcessor#postProcessAfterInitialization
+
 14. Spring Bean初始化完成阶段
 
 15. Spring Bean销毁前阶段
