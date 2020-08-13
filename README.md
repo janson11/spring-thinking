@@ -841,4 +841,10 @@ getBeansOfType(Class<T> type)以及重载方法
 
 17. Spring Bean垃圾收集
 
+    Bean垃圾回收(GC)
+
+    - 关闭Spring容器(应用上下文)
+    - 执行GC
+    - Spring Bean 覆盖的finalize()方法被回调
+
 18. 面试题

@@ -15,7 +15,7 @@ import javax.annotation.PreDestroy;
  * @Date: 2020/8/10 23:29
  **/
 public class UserHolder implements BeanNameAware, BeanFactoryAware, BeanClassLoaderAware, EnvironmentAware, InitializingBean
-        , SmartInitializingSingleton,DisposableBean {
+        , SmartInitializingSingleton, DisposableBean {
     private final User user;
     private Integer number;
     private String description;
@@ -73,7 +73,7 @@ public class UserHolder implements BeanNameAware, BeanFactoryAware, BeanClassLoa
         System.out.println("destroy()=" + description);
     }
 
-    public void doDestroy(){
+    public void doDestroy() {
         // destroy V11 ->V12
         this.description = "The user holder V12";
         System.out.println("doDestroy()=" + description);
@@ -126,5 +126,10 @@ public class UserHolder implements BeanNameAware, BeanFactoryAware, BeanClassLoa
         // postProcessAfterInitialization V7
         this.description = "The user holder V8";
         System.out.println("afterSingletonsInstantiated()=" + description);
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("The user holder is finalized...");
     }
 }
