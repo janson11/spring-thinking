@@ -819,6 +819,10 @@ getBeansOfType(Class<T> type)以及重载方法
 
 14. Spring Bean初始化完成阶段
 
+    方法回调
+
+    Spring 4.1+：org.springframework.beans.factory.SmartInitializingSingleton#afterSingletonsInstantiated
+
 15. Spring Bean销毁前阶段
 
 16. Spring Bean销毁阶段

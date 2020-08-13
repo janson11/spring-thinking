@@ -31,6 +31,11 @@ public class BeanInitializationLifecycleDemo {
         String[] locations = {"META-INF/dependency-lookup-context.xml", "META-INF/bean-constructor-dependency-injection.xml"};
         int beanNumbers = reader.loadBeanDefinitions(locations);
         System.out.println("已加载 BeanDefinition数量：" + beanNumbers);
+
+        // 显示执行 preInstantiateSingletons
+        // SmartInitializingSingleton 通常在Spring ApplicationContext场景使用
+        // preInstantiateSingletons将已经注册的BeanDefinition初始化成Spring Bean
+        beanFactory.preInstantiateSingletons();
         User user = beanFactory.getBean("user", User.class);
         System.out.println(user);
 
