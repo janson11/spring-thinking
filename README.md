@@ -825,6 +825,10 @@ getBeansOfType(Class<T> type)以及重载方法
 
 15. Spring Bean销毁前阶段
 
+    方法回调
+
+    org.springframework.beans.factory.config.DestructionAwareBeanPostProcessor#postProcessBeforeDestruction
+
 16. Spring Bean销毁阶段
 
 17. Spring Bean垃圾收集
