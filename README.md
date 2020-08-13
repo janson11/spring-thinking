@@ -805,6 +805,12 @@ getBeansOfType(Class<T> type)以及重载方法
 
 12. Spring Bean初始化阶段
 
+    Bean初始化(Initialization)
+
+    - @PostConstruct标注方法
+    - 实现InitializingBean接口的afterPropertiesSet()方法
+    - 自定义初始化方法
+
 13. Spring Bean初始化后阶段
 
 14. Spring Bean初始化完成阶段

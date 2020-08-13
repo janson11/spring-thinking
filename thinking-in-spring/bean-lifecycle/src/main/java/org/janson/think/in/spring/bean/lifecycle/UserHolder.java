@@ -2,19 +2,18 @@ package org.janson.think.in.spring.bean.lifecycle;
 
 import org.janson.think.in.spring.ioc.overview.domain.User;
 import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.BeanClassLoaderAware;
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.BeanFactoryAware;
-import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.beans.factory.*;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.core.env.Environment;
+
+import javax.annotation.PostConstruct;
 
 /**
  * @Description: User Holder 类
  * @Author: Janson
  * @Date: 2020/8/10 23:29
  **/
-public class UserHolder implements BeanNameAware, BeanFactoryAware, BeanClassLoaderAware, EnvironmentAware {
+public class UserHolder implements BeanNameAware, BeanFactoryAware, BeanClassLoaderAware, EnvironmentAware, InitializingBean {
     private final User user;
     private Integer number;
     private String description;
@@ -30,6 +29,31 @@ public class UserHolder implements BeanNameAware, BeanFactoryAware, BeanClassLoa
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+
+    /**
+     * 依赖注解驱动
+     * 当前场景：BeanFactory
+     */
+    @PostConstruct
+    public void initPostConstruct() {
+        // postProcessBeforeInitialization V3 ->V4
+        this.description = "The user holder V4";
+        System.out.println("initPostConstruct()=" + description);
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        // init() V3 ->V4
+        this.description = "The user holder V5";
+        System.out.println("afterPropertiesSet()=" + description);
+    }
+
+    public void init(){
+        // afterPropertiesSet V5 ->V6
+        this.description = "The user holder V6";
+        System.out.println("init()=" + description);
     }
 
     @Override

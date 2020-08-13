@@ -3,6 +3,7 @@ package org.janson.think.in.spring.bean.lifecycle;
 import org.janson.think.in.spring.ioc.overview.domain.User;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
+import org.springframework.context.annotation.CommonAnnotationBeanPostProcessor;
 
 /**
  * @Description: Bean实例化生命周期示例
@@ -20,6 +21,9 @@ public class BeanInitializationLifecycleDemo {
         // 方法一：添加BeanPostProcessor实现 MyInstantiationAwareBeanPostProcessor
         // 方法二：将MyInstantiationAwareBeanPostProcessor作为Bean注册
         beanFactory.addBeanPostProcessor(new MyInstantiationAwareBeanPostProcessor());
+        // 添加CommonAnnotationBeanPostProcessor解决@PostConstruct
+        beanFactory.addBeanPostProcessor(new CommonAnnotationBeanPostProcessor());
+
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
 
         // 加载Properties资源
