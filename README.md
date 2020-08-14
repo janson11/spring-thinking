@@ -846,5 +846,3 @@ getBeansOfType(Class<T> type)以及重载方法
     - 关闭Spring容器(应用上下文)
     - 执行GC
     - Spring Bean 覆盖的finalize()方法被回调
-
-18. 面试题
