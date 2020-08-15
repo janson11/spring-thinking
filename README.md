@@ -858,6 +858,9 @@ getBeansOfType(Class<T> type)以及重载方法
    - Spring 外部化配置元信息—PropertySource
    - Spring Profile 元信息—@Profile
 2. Spring Bean配置元信息
+   - GenericBeanDefinition：通用型BeanDefinition
+   - RootBeanDefinition：无Parent的BeanDefinition或者合并后BeanDefinition
+   - AnnotatedBeanDefinition：注解标注的BeanDefinition
 3. Spring Bean属性元信息
 4. Spring容器配置元信息
 5. 基于XML文件装载Spring Bean配置元信息
