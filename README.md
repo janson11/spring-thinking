@@ -846,3 +846,27 @@ getBeansOfType(Class<T> type)以及重载方法
     - 关闭Spring容器(应用上下文)
     - 执行GC
     - Spring Bean 覆盖的finalize()方法被回调
+
+
+
+## Spring配置元信息
+
+1. Spring配置元信息
+   - Spring Bean配置元信息—BeanDefinition
+   - Spring Bean属性元信息—PropertyValues
+   - Spring 容器配置元信息
+   - Spring 外部化配置元信息—PropertySource
+   - Spring Profile 元信息—@Profile
+2. Spring Bean配置元信息
+3. Spring Bean属性元信息
+4. Spring容器配置元信息
+5. 基于XML文件装载Spring Bean配置元信息
+6. 基于Properties文件装载Spring Bean配置元信息
+7. 基于Java注解装载Spring Bean配置元信息
+8. Spring Bean配置元信息底层实现
+9. 基于XML文件装载Spring IoC容器配置元信息
+10. 基于Java注解装载Sprig IoC容器配置元信息
+11. 基于Extensible XML authoring扩展Spring XML元素
+12. Extensible XML authoring扩展原理
+13. 基于Properties文件装载外部化配置
+14. 基于YAML文件装载外部化配置
