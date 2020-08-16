@@ -914,6 +914,42 @@ getBeansOfType(Class<T> type)以及重载方法
 
 7. 基于Java注解装载Spring Bean配置元信息
 
+   Spring模式注解
+
+   | Spring注解     | 场景说明          | 起始版本 |
+   | -------------- | ----------------- | -------- |
+   | @Repository    | 数据仓储模式注解  | 2.0      |
+   | @Component     | 通用组件模式注解  | 2.5      |
+   | @Service       | 服务模式注解      | 2.5      |
+   | @Controller    | Web控制器模式注解 | 2.5      |
+   | @Configuration | 配置类模式注解    | 3.0      |
+
+   Spring Bean依赖注入注解
+
+   | Spring注解 | 场景说明                           | 起始版本 |
+   | ---------- | ---------------------------------- | -------- |
+   | @Autowired | Bean依赖注入，支持多种依赖查找方式 | 2.5      |
+   | @Qualifer  | 细粒度的@Autowired依赖查找         | 2.5      |
+   | Java注解   | 场景说明                           | 起始版本 |
+   | @Resource  | 类似于@Autowired                   | 2.5      |
+   | @Inject    | 类似于@Autowired                   | 2.5      |
+
+   Spring Bean条件装配注解
+
+   | Spring注解   | 场景说明       | 起始版本 |
+   | ------------ | -------------- | -------- |
+   | @Profile     | 配置化条件装配 | 3.1      |
+   | @Conditional | 编程条件装配   | 4.0      |
+
+   Spring Bean生命周期回调注解
+
+   | Spring注解     | 场景说明                                                | 起始版本 |
+   | -------------- | ------------------------------------------------------- | -------- |
+   | @PostConstruct | 替换XML元素<bean init-method="...">或InitializingBean   | 2.5      |
+   | @PreDestroy    | 替换XML元素<bean destory-method="..."或者DisposableBean | 2.5      |
+
+   
+
 8. Spring Bean配置元信息底层实现
 
 9. 基于XML文件装载Spring IoC容器配置元信息
