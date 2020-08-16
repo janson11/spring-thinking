@@ -952,6 +952,24 @@ getBeansOfType(Class<T> type)以及重载方法
 
 8. Spring Bean配置元信息底层实现
 
+   Spring BeanDefinition解析与注册
+
+   | 实现场景       | 实现类                         | 起始版本 |
+   | -------------- | ------------------------------ | -------- |
+   | XML资源        | XmlBeanDefinitionReader        | 1.0      |
+   | Properties资源 | PropertiesBeanDefinitionReader | 1.0      |
+   | Java注解       | AnnotatedBeanDefinitionReader  | 3.0      |
+
+   核心API —XmlBeanDefinitionReader
+
+   资源-Resource
+
+   底层-BeanDefinitionDocumentReader
+
+   - XML解析 -Java DOM Level 3 API 
+   - BeanDefinition解析-BeanDefinitionParserDelegate
+   - BeanDefinition注册-BeanDefinitionRegistry
+
 9. 基于XML文件装载Spring IoC容器配置元信息
 
 10. 基于Java注解装载Sprig IoC容器配置元信息
