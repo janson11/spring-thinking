@@ -903,6 +903,15 @@ getBeansOfType(Class<T> type)以及重载方法
 
 6. 基于Properties文件装载Spring Bean配置元信息
 
+   | Properties属性名 | 使用场景                      |
+   | ---------------- | ----------------------------- |
+   | (class)          | Bean类全称限定名              |
+   | (abstract)       | 是否为抽象的BeanDefinition    |
+   | (parent)         | 指定parent BeanDefinition名称 |
+   | (lazy-init)      | 是否为延迟初始化              |
+
+   底层实现-PropertiesBeanDefinitionReader
+
 7. 基于Java注解装载Spring Bean配置元信息
 
 8. Spring Bean配置元信息底层实现
