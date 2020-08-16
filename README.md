@@ -892,6 +892,15 @@ getBeansOfType(Class<T> type)以及重载方法
 
 5. 基于XML文件装载Spring Bean配置元信息
 
+   | XML元素          | 使用场景                                  |
+   | ---------------- | ----------------------------------------- |
+   | <beans:beans />  | 单XML资源下的多个Spring Beans配置         |
+   | <beans:bean />   | 单个Spring Bean定义(BeanDefintion)配置    |
+   | <beans:alias />  | 为Spring Bean定义(BeanDefinition)映射别名 |
+   | <beans:import /> | 加载外部Spring XML配置资源                |
+
+   
+
 6. 基于Properties文件装载Spring Bean配置元信息
 
 7. 基于Java注解装载Spring Bean配置元信息
