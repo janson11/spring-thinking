@@ -880,6 +880,16 @@ getBeansOfType(Class<T> type)以及重载方法
 
 4. Spring容器配置元信息
 
+   | bean元素属性                | 默认值     | 使用场景                                                     |
+   | --------------------------- | ---------- | ------------------------------------------------------------ |
+   | profile                     | null(留空) | Spring Profiles配置值                                        |
+   | default-lazy-init           | default    | 当outter beans "default-lazy-init"属性存在时，继承该值，否则为："false" |
+   | default-merge               | defalut    | 当outter beans "default-merge"属性存在时，继承该值，否则为："false" |
+   | default-autowire            | defalut    | 当outter beans "default-autowire"属性存在时，继承该值，否则为："no" |
+   | default-autowire-candidates | null(留空) | 默认Spring Beans 名称pattern                                 |
+   | default-init-method         | null(留空) | 默认Spring Beans 自定义初始化方法                            |
+   | default-destroy-method      | null(留空) | 默认Spring Beans 自定义销毁方法                              |
+
 5. 基于XML文件装载Spring Bean配置元信息
 
 6. 基于Properties文件装载Spring Bean配置元信息
