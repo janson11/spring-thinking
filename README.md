@@ -960,6 +960,9 @@ getBeansOfType(Class<T> type)以及重载方法
    | Properties资源 | PropertiesBeanDefinitionReader | 1.0      |
    | Java注解       | AnnotatedBeanDefinitionReader  | 3.0      |
 
+>   Spring XML资源BeanDefinition解析与注册
+>
+
    核心API —XmlBeanDefinitionReader
 
    资源-Resource
@@ -969,6 +972,40 @@ getBeansOfType(Class<T> type)以及重载方法
    - XML解析 -Java DOM Level 3 API 
    - BeanDefinition解析-BeanDefinitionParserDelegate
    - BeanDefinition注册-BeanDefinitionRegistry
+
+>   Spring Properties资源BeanDefinition解析与注册
+
+  核心API：PropertiesBeanDefinitionReader
+
+资源
+
+- 字节流：Resource
+- 字符流：EncodedResource
+
+底层
+
+- 存储-javas.util.Properties
+- BeanDefinition解析-API内部实现
+- BeanDefinition注册-BeanDefinition
+
+> Spring Java 注册BeanDefinition解析与注册
+
+核心API-AnnotatedBeanDefinitionReader
+ 资源
+
+  类对象：java.lang.Class
+
+底层
+
+条件评估-ConditionEvaluator
+
+Bean范围解析-ScopeMetadataResolver
+
+BeanDefinition解析-内部API实现
+
+BeanDefinition处理-AnnotationConfigUtils.processCommonDefinitionAnnotations
+
+BeanDefinition注册-BeanDefinitionRegistry
 
 9. 基于XML文件装载Spring IoC容器配置元信息
 
