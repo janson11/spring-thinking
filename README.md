@@ -1039,6 +1039,13 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 11. 基于Extensible XML authoring扩展Spring XML元素
 
+    Spring XML扩展
+
+    - 编写XML Schema文件：定义XML结构
+    - 自定义NamespaceHandler实现：命名空间绑定
+    - 自定义BeanDefinitionParser实现：XML元素与BeanDefinition解析
+    - 注册XML扩展：命名空间与XML Schema映射
+
 12. Extensible XML authoring扩展原理
 
 13. 基于Properties文件装载外部化配置
