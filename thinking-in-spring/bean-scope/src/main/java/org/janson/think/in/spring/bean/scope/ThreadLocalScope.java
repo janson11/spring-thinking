@@ -20,7 +20,7 @@ public class ThreadLocalScope implements Scope {
     private final NamedThreadLocal<Map<String, Object>> threadLocal = new NamedThreadLocal("thread-local-scope") {
         @Override
         protected Object initialValue() {
-            return new HashMap<>();
+            return new HashMap<>(1);
         }
     };
 
