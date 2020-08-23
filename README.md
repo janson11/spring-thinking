@@ -1048,6 +1048,25 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 12. Extensible XML authoring扩展原理
 
+    触发时机：
+
+    org.springframework.context.support.AbstractApplicationContext#obtainFreshBeanFactory
+
+    ​	org.springframework.context.support.AbstractRefreshableApplicationContext#refreshBeanFactory
+
+    org.springframework.context.support.AbstractXmlApplicationContext#loadBeanDefinitions(org.springframework.beans.factory.support.DefaultListableBeanFactory)
+
+    org.springframework.beans.factory.xml.XmlBeanDefinitionReader#doLoadBeanDefinitions
+
+    org.springframework.beans.factory.xml.BeanDefinitionParserDelegate#parseCustomElement(org.w3c.dom.Element)
+
+    核心流程：
+
+    - 获取namespace
+- 通过namespace解析NamespaceHandler
+    - 构造ParserContext
+- 解析元素，获取BeanDefinition。
+    
 13. 基于Properties文件装载外部化配置
 
 14. 基于YAML文件装载外部化配置
