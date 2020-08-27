@@ -1083,3 +1083,9 @@ BeanDefinition注册-BeanDefinitionRegistry
     
 
 14. 基于YAML文件装载外部化配置
+
+    org.springframework.beans.factory.config.YamlProcessor
+
+      	org.springframework.beans.factory.config.YamlMapFactoryBean
+
+      		org.springframework.beans.factory.config.YamlPropertiesFactoryBean
