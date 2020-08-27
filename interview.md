@@ -130,9 +130,30 @@ BeanFactory的默认实现DefaultListableBeanFactory，其中Bean生命周期与
 - Bean销毁前阶段-destroyBean
 - Bean销毁阶段-destroyBean
 
+### 20、Spring内建XML Schema常见有哪些？
+
+| 命名空间 | 所属模块       | Schema资源URL                                                |
+| -------- | -------------- | ------------------------------------------------------------ |
+| beans    | spring-beans   | https://www.springframework.org/schema/beans/spring-beans.xsd |
+| context  | spring-context | https://www.springframework.org/schema/context/spring-context.xsd |
+| aop      | spring-aop     | https://www.springframework.org/schema/aop/spring-aop.xsd    |
+| tx       | spring-tx      | https://www.springframework.org/schema/tx/spring-tx.xsd      |
+| util     | spring-beans   | https://www.springframework.org/schema/util/spring-util.xsd  |
+| tool     | spring-beans   | https://www.springframework.org/schema/tool/spring-tool.xsd  |
 
 
 
+### 21、Spring配置元信息具体有哪些？
 
+- Bean配置元信息：通过媒介（如XML、Properties等），解析BeanDefinition
+- IoC容器配置元信息：通过媒介（如XML、Properties等），控制IoC容器行为，比如注解驱动、AOP等。
+- 外部化配置：通过资源抽象（如Properties、YAML等），控制PropertySource
+- Spring Profile：通过外部化配置，提供条件分支流程。
 
+### 22、Extensible XML authoring的缺点
+
+- 高复杂度：开发人员需要熟悉XML Schema、spring.handlers、spring.schemas以及Spring API。
+- 嵌套元素支持较弱：通常需要使用方法递归或者其嵌套解析的方式处理嵌套（子）元素。
+- XML处理性能较差：Spring XML基于DOM Level 3 API实现，该API便于理解，然而新能较差。
+- XML框架移植性差：很难适配高性能和便利性的XML框架，如JAXB。
 
