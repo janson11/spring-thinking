@@ -1066,7 +1066,20 @@ BeanDefinition注册-BeanDefinitionRegistry
 - 通过namespace解析NamespaceHandler
     - 构造ParserContext
 - 解析元素，获取BeanDefinition。
-    
+  
 13. 基于Properties文件装载外部化配置
+
+    1. 注解驱动：
+
+       @org.springframework.context.annotation.PropertySource
+
+       @org.springframework.context.annotation.PropertySources
+
+    2. API编程：
+
+       org.springframework.core.env.PropertySource
+       org.springframework.core.env.PropertySources
+
+    
 
 14. 基于YAML文件装载外部化配置
