@@ -1184,6 +1184,18 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 6. Spring资源加载器
 
+   Resource加载器
+
+   org.springframework.core.io.ResourceLoader
+
+   ​	org.springframework.core.io.DefaultResourceLoader
+
+   ​		org.springframework.core.io.FileSystemResourceLoader
+
+   ​		org.springframework.core.io.ClassRelativeResourceLoader
+
+   org.springframework.context.support.AbstractApplicationContext
+
 7. Spring通配路径资源加载器
 
 8. Spring通配路径资源扩展
