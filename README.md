@@ -1265,6 +1265,24 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 4. Java国际化标准实现
 
+   核心接口
+
+   抽象实现：java.util.ResourceBundle
+
+   核心特性
+
+   - Key-Value设计
+   - 层次性设计
+   - 缓存设计
+   - 字符编码控制-java.util.ResourceBundle.Control
+   - Control SPI扩展-java.util.spi.ResourceBundleControlProvider
+
+   Properties资源实现：java.util.PropertyResourceBundle
+
+   例举实现：java.util.ListResourceBundle
+
+   
+
 5. Java文本格式化
 
 6. MessageSource开箱即用实现
