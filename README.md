@@ -1251,6 +1251,18 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 3. 层次性MessageSource
 
+   - Spring层次性接口回顾
+
+     org.springframework.beans.factory.HierarchicalBeanFactory
+
+     org.springframework.context.ApplicationContext
+
+     org.springframework.beans.factory.config.BeanDefinition
+
+   - Spring层次性国际化接口
+
+     org.springframework.context.HierarchicalMessageSource
+
 4. Java国际化标准实现
 
 5. Java文本格式化
