@@ -18,18 +18,14 @@ import java.io.Reader;
  **/
 public class EncodedFileSystemResourceLoaderDemo {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
         String currentJavaFilePath = System.getProperty("user.dir") + "/thinking-in-spring/resource/src/main/java/org/janson/think/in/spring/resource/EncodedFileSystemResourceDemo.java";
         File currentJavaFile = new File(currentJavaFilePath);
         FileSystemResourceLoader resourceLoader = new FileSystemResourceLoader();
         Resource resource = resourceLoader.getResource(currentJavaFilePath);
         EncodedResource encodedResource = new EncodedResource(resource, "UTF-8");
-        Reader reader = null;
-        try {
-            reader = encodedResource.getReader();
+        try (Reader reader = encodedResource.getReader()) {
             System.out.println(IOUtils.toString(reader));
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 }

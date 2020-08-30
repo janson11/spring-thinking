@@ -1212,6 +1212,12 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 8. Spring通配路径资源扩展
 
+   实现org.springframework.util.PathMatcher
+
+   重置PathMatcher
+
+   org.springframework.core.io.support.PathMatchingResourcePatternResolver#setPathMatcher
+
 9. 依赖注入Spring Resource
 
 10. 依赖注入ResourceLoader
