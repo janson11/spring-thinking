@@ -157,3 +157,40 @@ BeanFactory的默认实现DefaultListableBeanFactory，其中Bean生命周期与
 - XML处理性能较差：Spring XML基于DOM Level 3 API实现，该API便于理解，然而新能较差。
 - XML框架移植性差：很难适配高性能和便利性的XML框架，如JAXB。
 
+### 23、Spring配置资源中有哪些常见类型？
+
+- XML资源
+- Properties资源、
+- YAML资源:
+
+### 24、请列举不同类型Spring配置资源？
+
+XML资源：
+
+- 普通Bean Definition XML配置资源 —*.xml
+- Spring Schema资源 —*.xsd
+
+Properties资源：
+ -  普通Properties格式资源—*.properties
+ -  Spring Handler实现类映射文件—META-INF/spring.handlers
+ -  Spring Schema资源映射文件—META-INF/spring.schemas
+
+
+YAML资源:
+- 普通YAML配置资源—*.yaml或*.yml 
+
+### 25、Java标准资源管理扩展的步骤？
+
+- 简易实现：
+
+  实现URLStreamHandler并放置到在sun.net.www.protocol.${protocol}.Handler包下
+
+- 自定义实现
+
+  实现URLStreamHandler
+
+  添加-Djava.protocol.handler.pkgs启动参数，指向URLStreamHandler实现类的包下。
+
+- 高级实现
+
+  实现URLStreamHandlerFactory并传递到URL之中。
