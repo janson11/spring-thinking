@@ -1198,6 +1198,18 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 7. Spring通配路径资源加载器
 
+   通配路径 ResourceLoader
+
+   org.springframework.core.io.support.ResourcePatternResolver
+
+   ​	org.springframework.core.io.support.PathMatchingResourcePatternResolver
+
+   路径匹配器
+
+   org.springframework.util.PathMatcher
+
+    Ant模式匹配实现：org.springframework.util.AntPathMatcher
+
 8. Spring通配路径资源扩展
 
 9. 依赖注入Spring Resource
