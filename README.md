@@ -1168,6 +1168,20 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 5. Spring Resource接口扩展
 
+   可写资源接口：
+
+   org.springframework.core.io.WritableResource
+
+   ​	org.springframework.core.io.FileSystemResource
+
+   ​		org.springframework.core.io.FileUrlResource
+
+   ​			org.springframework.core.io.PathResource（@Deprecated）
+
+   编码资源接口：
+
+   org.springframework.core.io.support.EncodedResource
+
 6. Spring资源加载器
 
 7. Spring通配路径资源加载器
