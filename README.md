@@ -1153,6 +1153,19 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 4. Spring内建Resource实现
 
+   内建实现
+
+   | 资源来源       | 资源协议      | 实现类                                                       |
+   | -------------- | ------------- | ------------------------------------------------------------ |
+   | Bean定义       | 无            | org.springframework.beans.factory.support.BeanDefinitionResource |
+   | 数组           | 无            | org.springframework.core.io.ByteArrayResource                |
+   | 类路径         | classpath:/   | org.springframework.core.io.ClassPathResource                |
+   | 文件系统       | file:/        | org.springframework.core.io.FileSystemResource               |
+   | URL            | URL支持的协议 | org.springframework.core.io.UrlResource                      |
+   | ServletContext | 无            | org.springframework.web.context.support.ServletContextResource |
+
+   
+
 5. Spring Resource接口扩展
 
 6. Spring资源加载器
