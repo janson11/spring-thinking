@@ -1222,3 +1222,9 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 10. 依赖注入ResourceLoader
 
+    方法一：实现org.springframework.context.ResourceLoaderAware回调
+
+    方法二：实现@Autowired注入ResourceLoader
+
+    方法三：注入ApplicationContext作为ResourceLoader
+
