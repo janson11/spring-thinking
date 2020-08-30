@@ -1089,3 +1089,67 @@ BeanDefinition注册-BeanDefinitionRegistry
       	org.springframework.beans.factory.config.YamlMapFactoryBean
 
       		org.springframework.beans.factory.config.YamlPropertiesFactoryBean
+
+### Spring资源管理
+
+1. 引入动机
+
+   Java标准资源管理强大，然而扩展复杂，资源存储方式不统一
+
+   Spring要自立门户
+
+   Spring "抄"、"超"和"潮"
+
+2. Java标注资源管理
+
+   - Java标准资源定位
+
+     | 职责         | 说明                                                         |
+     | ------------ | ------------------------------------------------------------ |
+     | 面向资源     | 文件系统、artifact(jar、war、ear文件)以及远程资源（HTTP、FTP等） |
+     | API整合      | java.lang.ClassLoader#getResource、java.io.File或java.net.URL |
+     | 资源定位     | java.net.URL或java.net.URI                                   |
+     | 面向流式存储 | java.net.URLConnection                                       |
+     | 协议扩展     | java.net.URLStreamHandler或java.net.URLStreamHandlerFactory  |
+ - 基于java.net.URLStreamHandler扩展协议 
+
+   JDK1.8内建协议实现
+
+   | 协议   | 实现类                              |
+   | ------ | ----------------------------------- |
+   | file   | sun.net.www.protocol.file.Handler   |
+   | ftp    | sun.net.www.protocol.ftp.Handler    |
+   | http   | sun.net.www.protocol.http.Handler   |
+   | http   | sun.net.www.protocol.https.Handler  |
+   | jar    | sun.net.www.protocol.jar.Handler    |
+   | mailto | sun.net.www.protocol.mailto.Handler |
+   | netdoc | sun.net.www.protocol.netdoc.Handler |
+
+   基于java.net.URLStreamHandler扩展协议
+
+   实现类名必须为"Handler"
+
+   | 实现类命名规则 | 说明                                                         |
+   | -------------- | ------------------------------------------------------------ |
+   | 默认           | sun.net.www.protocol.${protocol}.Handler                     |
+   | 自定义         | 通过Java Properties java.proptocol.handler.pkgs指定实现类包名，实现类名必须为"Handler"。如果存在多包名指定，通过分隔符"\|" |
+
+   
+
+
+3. Spring资源接口
+
+4. Spring内建Resource实现
+
+5. Spring Resource接口扩展
+
+6. Spring资源加载器
+
+7. Spring通配路径资源加载器
+
+8. Spring通配路径资源扩展
+
+9. 依赖注入Spring Resource
+
+10. 依赖注入ResourceLoader
+
