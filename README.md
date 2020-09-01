@@ -1281,9 +1281,26 @@ BeanDefinition注册-BeanDefinitionRegistry
 
    例举实现：java.util.ListResourceBundle
 
-   
-
 5. Java文本格式化
+
+   核心接口：java.text.MessageFormat
+
+   基本用法：
+
+   - 设置消息格式模式：new MessageFormat(...)
+   - 格式化：format(new Object[]{...})
+
+   消息格式模式：
+
+   - 格式元素：{ArgumentIndex,(FormatType,(FormateStyle))}
+   - FormatType:消息格式类型，可选项，每种类型在number、date、time和choice类型选其一。
+   - formateStyle：消息格式风格，可选项，包括：short、medium、long、full、integer、currency。
+
+   高级特性：
+
+   - 重置消息格式模式
+   - 重置java.text.Locale
+   - 重置java.text.Format
 
 6. MessageSource开箱即用实现
 
