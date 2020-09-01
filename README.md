@@ -1314,4 +1314,12 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 7. MessageSource内建实现
 
+   MessageSource内建Bean可能来源
+
+   预注册Bean名称为："messageSource",类型为MessageSource Bean
+
+   默认内建实现—DelegatingMessageSource
+
+   层次性查找MessageSource对象
+
 8. 课外资料
