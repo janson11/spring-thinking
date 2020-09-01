@@ -1304,6 +1304,14 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 6. MessageSource开箱即用实现
 
+   - 基于ResourceBundle+MessageFormat组合MessageSource实现
+
+     org.springframework.context.support.ResourceBundleMessageSource
+
+   - 可重载Properties+MessageFormat组合MessageSource实现
+
+     org.springframework.context.support.ReloadableResourceBundleMessageSource
+
 7. MessageSource内建实现
 
 8. 课外资料
