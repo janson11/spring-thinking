@@ -1323,3 +1323,11 @@ BeanDefinition注册-BeanDefinitionRegistry
    层次性查找MessageSource对象
 
 8. 课外资料
+
+   Spring Boot为什么要新建MessageSource Bean？
+
+   - AbstractApplicationContext的实现决定了MessageSource内建实现
+   - Spring Boot通过外部化配置简化MessageSource Bean构建
+   - Spring Boot基于Bean Validation校验非常普通
+
+   
