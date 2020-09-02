@@ -194,3 +194,34 @@ YAML资源:
 - 高级实现
 
   实现URLStreamHandlerFactory并传递到URL之中。
+
+### 26、Spring国际化接口有哪些？
+
+核心接口：MessageSource
+
+层次性接口：org.springframework.context.HierarchicalMessageSource
+
+
+
+### 27、Spring有哪些MessageSource内建实现？
+
+org.springframework.context.support.ResourceBundleMessageSource
+
+org.springframework.context.support.ReloadableResourceBundleMessageSource
+
+org.springframework.context.support.StaticMessageSource
+
+org.springframework.context.support.DelegatingMessageSource
+
+
+
+### 28、如何实现配置自动更新MessageSource？
+
+主要技术：
+
+Java NIO 2：java.nio.file.WatchService
+
+Java Concurrency：java.util.concurrent.ExecutorService
+
+Spring：org.springframework.context.support.AbstractMessageSource
+
