@@ -1331,3 +1331,37 @@ BeanDefinition注册-BeanDefinitionRegistry
    - Spring Boot基于Bean Validation校验非常普通
 
    
+
+   
+
+   
+
+   
+
+   ### Spring校验（Validation）
+
+   1. Spring校验使用场景
+
+      - Spring常规校验(Validator)
+
+      - Spring数据绑定(DataBinder)
+
+      - Spring Web参数绑定(WebDataBinder)
+
+      - Spring WebMVC/WebFlux处理方法参数校验
+
+        
+
+   2. Validator接口设计
+
+   3. Errors接口设计
+
+   4. 自定义Validator
+
+   5. Validator的救赎
+
+   6. 面试题精选
+
+      
+
+   
