@@ -1343,16 +1343,25 @@ BeanDefinition注册-BeanDefinitionRegistry
    1. Spring校验使用场景
 
       - Spring常规校验(Validator)
-
       - Spring数据绑定(DataBinder)
-
       - Spring Web参数绑定(WebDataBinder)
-
       - Spring WebMVC/WebFlux处理方法参数校验
 
-        
-
    2. Validator接口设计
+
+      接口职责：Spring内部校验器接口，通过编程的方式校验目标对象。
+
+      核心方法：supports(Class):校验目标类能否校验
+
+      ​					validate(Object,Errors)校验目标对象，并将校验失败的内容输出至Errors对象
+
+      配置组件
+
+      错误收集器：org.springframework.validation.Errors
+
+      Validator工具类：org.springframework.validation.ValidationUtils
+
+      
 
    3. Errors接口设计
 
