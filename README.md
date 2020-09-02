@@ -1361,9 +1361,20 @@ BeanDefinition注册-BeanDefinitionRegistry
 
       Validator工具类：org.springframework.validation.ValidationUtils
 
-      
-
    3. Errors接口设计
+
+      接口职责：数据绑定和校验错误收集接口，与Java Bean和其属性有强关联性。
+      核心方法：
+
+      reject方法（重载）：收集错误方案
+
+      rejectValue方法(重载)：收集对象字段中的错误文案
+
+      配套组件：
+
+      Java Bean错误描述：org.springframework.validation.ObjectError
+
+      Java Bean属性错误描述：org.springframework.validation.FieldError
 
    4. 自定义Validator
 
