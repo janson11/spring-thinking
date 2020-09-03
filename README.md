@@ -1372,18 +1372,32 @@ BeanDefinition注册-BeanDefinitionRegistry
 
       Java Bean属性错误描述：org.springframework.validation.FieldError
 
-   4. 自定义Validator
-
-      Errors文案生成步骤
+   4. Errors文案生成步骤
 
       - 选择Errors实现(如：org.springframework.validation.BeanPropertyBindingResult)
       - 调用reject或rejectValue方法
       - 获取Errors 对象中的ObjectError或FieldError
       - 将ObjectError或FieldError中的code和args,关联MessageSource实现（如：org.springframework.context.support.ResourceBundleMessageSource）
 
-   5. Validator的救赎
+   5. 自定义Validator
 
-   6. 面试题精选
+      实现org.springframework.validation.Validator接口
+
+      - 实现supports方法
+
+      - 实现validate方法
+
+         通过Errors对象收集错误
+
+        ​    ObjectError:对象（Bean）错误
+
+        ​    FieldError:对象（Bean）属性（Property）错误
+
+        通过ObjectError和FieldError关联MessageSource实现获取最终文案。
+
+   6. Validator的救赎
+
+   7. 面试题精选
 
       
 
