@@ -225,3 +225,26 @@ Java Concurrency：java.util.concurrent.ExecutorService
 
 Spring：org.springframework.context.support.AbstractMessageSource
 
+
+
+### 29、Spring校验接口是哪个？
+
+org.springframework.validation.Validator
+
+
+
+### 30、Spring有哪些校验核心组件？
+
+- 校验器：org.springframework.validation.Validator
+- 错误收集器：org.springframework.validation.Errors
+- Java Bean错误描述：org.springframework.validation.ObjectError
+- Java Bean属性错误描述：org.springframework.validation.FieldError
+- Bean Validation适配：
+- org.springframework.validation.beanvalidation.LocalValidatorFactoryBean
+
+
+
+### 31、请通过示例演示Spring Bean的校验？
+
+
+
