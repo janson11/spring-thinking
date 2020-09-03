@@ -1327,16 +1327,12 @@ BeanDefinition注册-BeanDefinitionRegistry
    Spring Boot为什么要新建MessageSource Bean？
 
    - AbstractApplicationContext的实现决定了MessageSource内建实现
+
    - Spring Boot通过外部化配置简化MessageSource Bean构建
+
    - Spring Boot基于Bean Validation校验非常普通
 
-   
-
-   
-
-   
-
-   
+     
 
    ### Spring校验（Validation）
 
@@ -1377,6 +1373,13 @@ BeanDefinition注册-BeanDefinitionRegistry
       Java Bean属性错误描述：org.springframework.validation.FieldError
 
    4. 自定义Validator
+
+      Errors文案生成步骤
+
+      - 选择Errors实现(如：org.springframework.validation.BeanPropertyBindingResult)
+      - 调用reject或rejectValue方法
+      - 获取Errors 对象中的ObjectError或FieldError
+      - 将ObjectError或FieldError中的code和args,关联MessageSource实现（如：org.springframework.context.support.ResourceBundleMessageSource）
 
    5. Validator的救赎
 
