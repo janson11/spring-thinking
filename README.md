@@ -1397,6 +1397,14 @@ BeanDefinition注册-BeanDefinitionRegistry
 
    6. Validator的救赎
 
+      Bean Validation与Validator适配
+
+      核心组件：org.springframework.validation.beanvalidation.LocalValidatorFactoryBean
+
+      依赖Bean Validation—JSR-303or JSR-349 provider
+
+      Bean方法参数校验-org.springframework.validation.beanvalidation.MethodValidationPostProcessor
+
    7. 面试题精选
 
       
