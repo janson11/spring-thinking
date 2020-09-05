@@ -1519,17 +1519,35 @@ BeanDefinition注册-BeanDefinitionRegistry
 ### Spring类型转换
 
 1. Spring 类型转换的实现
+
+   基于JavaBeans接口类型转换实现：基于java.beans.PropertyEditor接口扩展
+
+   Spring 3.0+通用类型转换实现：
+
 2. 使用场景
+
 3. 基于JavaBeans接口的类型转换
+
 4. Spring内建PropertyEditor扩展
+
 5. 自定义PropertyEditor扩展
+
 6. Spring PropertyEditor的设计缺陷
+
 7. Spring 3 通用类型转换接口
+
 8. Spring 内建类型转换器
+
 9. Converter接口的局限性
+
 10. GenericConverter接口
+
 11. 优化GenericConverter接口
+
 12. 扩展Spring类型转换器
+
 13. 统一类型转换服务
+
 14. ConversionService作为依赖
+
 15. 面试题精选
