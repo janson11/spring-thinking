@@ -248,3 +248,21 @@ org.springframework.validation.Validator
 
 
 
+### 32、Spring数据绑定API是什么？
+
+org.springframework.validation.DataBinder
+
+### 33、BeanWrapper与JavaBeans之间关系是？
+
+Spring 底层JavaBeans基础设施的中心化接口。
+
+BeanWrapper是基于JavaBeans的二次封装，有且仅有一个实现类BeanWrapperImpl
+
+### 34、DataBinder是怎么完成属性类型转换的？
+
+
+
+
+
+
+
