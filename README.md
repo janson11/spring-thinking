@@ -1494,6 +1494,21 @@ BeanDefinition注册-BeanDefinitionRegistry
 
    7. 课外资料
 
+      标准JavaBeans是如何操作属性的？
+
+       
+
+      | API                           | 说明                    |
+      | ----------------------------- | ----------------------- |
+      | java.beans.Introspector       | Java Beans内建API       |
+      | java.beans.BeanInfo           | Java Bean元信息API      |
+      | java.beans.BeanDescriptor     | Java Bean信息描述符     |
+      | java.beans.PropertyDescriptor | Java Bean属性描述符     |
+      | java.beans.MethodDescriptor   | Java Bean方法描述符     |
+      | java.beans.EventSetDescriptor | Java Bean事件集合描述符 |
+
+      
+
    8. DataBinder数据校验
 
    
