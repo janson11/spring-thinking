@@ -1413,15 +1413,50 @@ BeanDefinition注册-BeanDefinitionRegistry
    ### Spring数据绑定
 
    1. Spring数据绑定使用场景
+
       - Spring BeanDefinition到Bean实例创建
       - Spring数据绑定（DataBinder）
       - Spring Web 参数绑定（WebDataBinder）
+
    2. Spring数据绑定组件
+
+      标准组件
+
+      - org.springframework.validation.DataBinder
+
+      Web组件：
+
+      - org.springframework.web.bind.WebDataBinder
+      - org.springframework.web.bind.ServletRequestDataBinder
+      - org.springframework.web.bind.support.WebRequestDataBinder
+      - org.springframework.web.bind.support.WebRequestDataBinder（since 5.0）
+
+      DataBinder核心属性
+
+      | 属性                 | 说明                         |
+      | -------------------- | ---------------------------- |
+      | target               | 关联目标Bean                 |
+      | objectName           | 目标Bean名称                 |
+      | bindingResult        | 属性绑定结果                 |
+      | typeConverter        | 类型转换器                   |
+      | conversionService    | 类型转换服务                 |
+      | messageCodesResolver | 校验错误文案Code处理器       |
+      | validators           | 关联的Bean Validator实例集合 |
+
+      DataBinder绑定方法
+
+      bind(PropertyValues):将PropertyValues key-value内容映射到关联Bean（target）中的属性上。假设PropertyValues中包含"name=小单"的键值对，同时Bean对象User中存在name属性，当bind方法执行时，User对象的中的name属性值将被绑定为"小单"。
+
    3. Spring数据绑定元数据
+
    4. Spring数据绑定控制参数
+
    5. Spring 底层Java Beans替换实现
+
    6. BeanWrapper的使用场景
+
    7. 课外资料
+
    8. DataBinder数据校验
 
    
