@@ -1472,6 +1472,18 @@ BeanDefinition注册-BeanDefinitionRegistry
 
    5. Spring 底层Java Beans替换实现
 
+      JavaBeans核心实现—java.beans.BeanInfo
+
+      - 属性（Property）java.beans.PropertyEditor
+      - 方法（Method）
+      - 事件（Event）
+      - 表达式（Expression）
+
+      Spring替代实现-org.springframework.beans.BeanWrapper
+
+      - 属性（Property）：java.beans.PropertyEditor
+      - 嵌套属性路径：nested path
+
    6. BeanWrapper的使用场景
 
    7. 课外资料
