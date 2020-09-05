@@ -1511,4 +1511,7 @@ BeanDefinition注册-BeanDefinitionRegistry
 
    8. DataBinder数据校验
 
-   
+      DataBinder与BeanWrapper
+
+      - bind方法生成BeanPropertyBindingResult
+      - BeanPropertyBindingResult关联BeanWrapper
