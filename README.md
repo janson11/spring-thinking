@@ -1408,7 +1408,7 @@ BeanDefinition注册-BeanDefinitionRegistry
    7. 面试题精选
 
 
-   
+
 
    ### Spring数据绑定
 
@@ -1463,6 +1463,12 @@ BeanDefinition注册-BeanDefinitionRegistry
       
 
    4. Spring数据绑定控制参数
+
+      DataBinder绑定特殊场景分析
+
+      - 当PropertyValues中包含名称x的PropertyValue，目标对象B不存在x属性，当bind方法执行时，会发生什么？无异常
+      - 当PropertyValues中包含名称x的PropertyValue，目标对象B存在x属性，当bind方法执行时，如何避免B属性x不被绑定？设置
+      - 当PropertyValues中包含名称x、y的PropertyValue，目标对象B存在x属性（嵌套y属性），当bind方法执行时，会发生什么？正常
 
    5. Spring 底层Java Beans替换实现
 

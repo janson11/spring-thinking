@@ -22,6 +22,16 @@ public class User implements BeanNameAware {
     private City[] workCities;
     private List<City> lifeCities;
     private Resource configFileLocation;
+    private Company company;
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
+    }
+
     /**
      * 当前bean的名称
      **/
