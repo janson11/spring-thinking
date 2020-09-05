@@ -1486,6 +1486,12 @@ BeanDefinition注册-BeanDefinitionRegistry
 
    6. BeanWrapper的使用场景
 
+      - Spring 底层JavaBeans基础设施的中心化接口
+      - 通常不会直接使用，间接用于BeanFactory和DataBinder
+      - 提供标准JavaBeans分析和操作，能够单独或批量存储Java Bean的属性（properties）
+      - 支持嵌套属性路径（nested path）
+      - 实现类org.springframework.beans.BeanWrapperImpl
+
    7. 课外资料
 
    8. DataBinder数据校验
