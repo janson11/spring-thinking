@@ -1449,6 +1449,19 @@ BeanDefinition注册-BeanDefinitionRegistry
 
    3. Spring数据绑定元数据
 
+      DataBinder元数据—PropertyValues
+
+      | 特征         | 说明                                                         |
+      | ------------ | ------------------------------------------------------------ |
+      | 数据来源     | BeanDefinition，主要来源XML资源配置BeanDefinition            |
+      | 数据结构     | 由一个或多个PropertyValue组成                                |
+      | 成员结构     | PropertyValue包含属性名称，以及属性值（包括原始值、类型转换后的值） |
+      | 常见实现     | MutablePropertySources                                       |
+      | Web扩展实现  | ServletConfigPropertyValues、ServletRequestParameterPropertyValues |
+      | 相关生命周期 | org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor#postProcessPropertyValues |
+
+      
+
    4. Spring数据绑定控制参数
 
    5. Spring 底层Java Beans替换实现
