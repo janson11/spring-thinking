@@ -1582,6 +1582,20 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 7. Spring 3 通用类型转换接口
 
+   - 类型转换接口：org.springframework.core.convert.converter.Converter<S,T>
+
+     泛型参数S：来源参数，参数T：目标类型
+
+     核心方法：T convert(S） 
+
+   - 通用类型转换接口：org.springframework.core.convert.converter.GenericConverter
+
+     核心方法：org.springframework.core.convert.converter.GenericConverter#convert(@Nullable Object source, TypeDescriptor sourceType, TypeDescriptor targetType)
+
+     配对类型：org.springframework.core.convert.converter.GenericConverter.ConvertiblePair
+
+     类型描述：org.springframework.core.convert.TypeDescriptor
+
 8. Spring 内建类型转换器
 
 9. Converter接口的局限性
