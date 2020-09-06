@@ -1617,6 +1617,18 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 10. GenericConverter接口
 
+    org.springframework.core.convert.converter.GenericConverter
+
+    | 核心要素 | 说明                                                         |
+    | -------- | ------------------------------------------------------------ |
+    | 使用场景 | 用于"复合"类型转换场景，比如Collection、Map和数组等          |
+    | 转换范围 | Set<ConvertiblePair> getConvertibleTypes()                   |
+    | 配对类型 | org.springframework.core.convert.converter.GenericConverter.ConvertiblePair |
+    | 转换方法 | convert(@Nullable Object source, TypeDescriptor sourceType, TypeDescriptor targetType) |
+    | 类型描述 | org.springframework.core.convert.TypeDescriptor              |
+
+    
+
 11. 优化GenericConverter接口
 
 12. 扩展Spring类型转换器
