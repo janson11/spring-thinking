@@ -1627,9 +1627,19 @@ BeanDefinition注册-BeanDefinitionRegistry
     | 转换方法 | convert(@Nullable Object source, TypeDescriptor sourceType, TypeDescriptor targetType) |
     | 类型描述 | org.springframework.core.convert.TypeDescriptor              |
 
-    
-
 11. 优化GenericConverter接口
+
+    - GenericConverter局限性：
+
+      缺少Source Type和Target Type前置判断
+
+      单一类型转换复杂
+
+    - GenericConverter优化接口：ConditionalGenericConverter
+
+      复合类型转换：org.springframework.core.convert.converter.GenericConverter
+
+      类型条件判断：org.springframework.core.convert.converter.ConditionalConverter
 
 12. 扩展Spring类型转换器
 
