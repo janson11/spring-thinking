@@ -1643,6 +1643,18 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 12. 扩展Spring类型转换器
 
+    实现转换器接口
+
+    org.springframework.core.convert.converter.Converter
+
+    org.springframework.core.convert.converter.ConverterFactory
+    org.springframework.core.convert.converter.GenericConverter
+    注册转换器实现：
+
+    通过org.springframework.context.support.ConversionServiceFactoryBean Spring Bean 
+
+    通过org.springframework.core.convert.ConversionService API
+
 13. 统一类型转换服务
 
 14. ConversionService作为依赖

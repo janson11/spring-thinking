@@ -24,7 +24,17 @@ public class User implements BeanNameAware {
     private List<City> lifeCities;
     private Resource configFileLocation;
     private Company company;
+
+    public String getContextAsText() {
+        return contextAsText;
+    }
+
+    public void setContextAsText(String contextAsText) {
+        this.contextAsText = contextAsText;
+    }
+
     private Properties context;
+    private String contextAsText;
 
     public Properties getContext() {
         return context;
