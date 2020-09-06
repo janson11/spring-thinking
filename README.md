@@ -1537,6 +1537,16 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 3. 基于JavaBeans接口的类型转换
 
+   核心职责：将Spring类型的内容转换为目标类型的对象
+
+   扩展原理：
+
+   - Spring框架将文本内容传递到PropertyEditor实现的setAsText(String)方法
+   - PropertyEditor#setAsText(String)方法实现将String类型转换为目标类型的对象。
+   - 将目标类型的对象传入PropertyEditor#setValue(Object)方法
+   - PropertyEditor#setValue(Object)方法实现需要临时存储传入对象
+   - Spring框架将通过PropertyEditor#getValue()获取类型转换后的对象
+
 4. Spring内建PropertyEditor扩展
 
 5. 自定义PropertyEditor扩展
