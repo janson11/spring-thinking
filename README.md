@@ -1572,6 +1572,14 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 6. Spring PropertyEditor的设计缺陷
 
+   违反职责单一原则：
+
+   java.beans.PropertyEditor接口职责太多，除了类型转换，还包括Java Beans事件和Java GUI交互
+
+   java.beans.PropertyEditor实现类型局限：来源类型只能为java.lang.String类型
+
+   java.beans.PropertyEditor实现缺少类型安全：除了实现类名可以表达语义，实现类无法感知目标转换类型。
+
 7. Spring 3 通用类型转换接口
 
 8. Spring 内建类型转换器
