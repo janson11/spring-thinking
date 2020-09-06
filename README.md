@@ -1526,6 +1526,15 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 2. 使用场景
 
+   | 场景               | 基于JavaBeans接口的类型转换实现 | Spring 3.0+通用类型转换实现 |
+   | ------------------ | ------------------------------- | --------------------------- |
+   | 数据绑定           | YES                             | YES                         |
+   | BeanWrapper        | YES                             | YES                         |
+   | Bean属性类型转换   | YES                             | YES                         |
+   | 外部化属性类型转换 | NO                              | YES                         |
+
+   
+
 3. 基于JavaBeans接口的类型转换
 
 4. Spring内建PropertyEditor扩展
