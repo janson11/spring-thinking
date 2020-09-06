@@ -1598,6 +1598,16 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 8. Spring 内建类型转换器
 
+   内建扩展
+
+   | 转换场景             | 实现类所在包名(package)                      |
+   | -------------------- | -------------------------------------------- |
+   | 日期/时间相关        | org.springframework.format.datetime          |
+   | Java 8 日期/时间相关 | org.springframework.format.datetime.standard |
+   | 通用实现             | org.springframework.core.io.support          |
+
+   
+
 9. Converter接口的局限性
 
 10. GenericConverter接口
