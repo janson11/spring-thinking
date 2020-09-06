@@ -1606,9 +1606,14 @@ BeanDefinition注册-BeanDefinitionRegistry
    | Java 8 日期/时间相关 | org.springframework.format.datetime.standard |
    | 通用实现             | org.springframework.core.io.support          |
 
-   
-
 9. Converter接口的局限性
+
+   局限一：缺少Source Type和Target  Type前置判断
+
+   应对：增加org.springframework.core.convert.converter.ConditionalConverter实现 
+   局限二：仅能转换单一的Source Type和Target Type
+
+   应对：使用org.springframework.core.convert.converter.GenericConverter代替
 
 10. GenericConverter接口
 
