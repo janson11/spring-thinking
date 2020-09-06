@@ -1549,6 +1549,19 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 4. Spring内建PropertyEditor扩展
 
+   内建扩展(org.springframework.beans.propertyeditors包下)
+
+   | 转换场景         | 实现类                                                       |
+   | ---------------- | ------------------------------------------------------------ |
+   | String—>Byte数组 | org.springframework.beans.propertyeditors.ByteArrayPropertyEditor |
+   | String—>Char     | org.springframework.beans.propertyeditors.CharacterEditor    |
+   | String—>Char数组 | org.springframework.beans.propertyeditors.CharArrayPropertyEditor |
+   | String—>Charset  | org.springframework.beans.propertyeditors.CharsetEditor      |
+   | String—>Class    | org.springframework.beans.propertyeditors.ClassEditor        |
+   | String—>Currency | ororg.springframework.beans.propertyeditors.CurrencyEditor   |
+
+   
+
 5. 自定义PropertyEditor扩展
 
 6. Spring PropertyEditor的设计缺陷
