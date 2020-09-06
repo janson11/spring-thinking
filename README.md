@@ -1666,8 +1666,23 @@ BeanDefinition注册-BeanDefinitionRegistry
     | FormattingConversionService        | 通用Formatter+GenericConversionService实现，不内置转化器和Formatter实现 |
     | DefaultFormattingConversionService | DefaultConversionService+格式化实现，比如：SR-354 Money & Currency, JSR-310 Date-Time |
 
-    
-
 14. ConversionService作为依赖
+
+    类型转换器底层接口org.springframework.beans.TypeConverter
+
+    - 起始版本：Spring 2.0
+    - 核心方法：convertIfNecessary重载方法
+    - 抽象实现：org.springframework.beans.TypeConverterSupport
+    - 简单实现：org.springframework.beans.SimpleTypeConverter
+
+    类型转化器底层委派实现org.springframework.beans.TypeConverterDelegate
+
+    - 构造来源org.springframework.beans.AbstractNestablePropertyAccessor实现org.springframework.beans.BeanWrapperImpl
+
+    - 依赖 -java.beans.PropertyEditor
+
+      默认内建实现—org.springframework.beans.PropertyEditorRegistrySupport#registerDefaultEditors
+
+    - 可选依赖：org.springframework.core.convert.ConversionService
 
 15. 面试题精选
