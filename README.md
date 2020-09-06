@@ -1657,6 +1657,17 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 13. 统一类型转换服务
 
+    org.springframework.core.convert.ConversionService
+
+    | 实现类型                           | 说明                                                         |
+    | ---------------------------------- | ------------------------------------------------------------ |
+    | GenericConversionService           | 通用ConversionService模板实现，不内置转化器实现              |
+    | DefaultConversionService           | 基础ConversionService实现，内置常用转化器实现                |
+    | FormattingConversionService        | 通用Formatter+GenericConversionService实现，不内置转化器和Formatter实现 |
+    | DefaultFormattingConversionService | DefaultConversionService+格式化实现，比如：SR-354 Money & Currency, JSR-310 Date-Time |
+
+    
+
 14. ConversionService作为依赖
 
 15. 面试题精选
