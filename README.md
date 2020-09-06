@@ -1560,9 +1560,15 @@ BeanDefinition注册-BeanDefinitionRegistry
    | String—>Class    | org.springframework.beans.propertyeditors.ClassEditor        |
    | String—>Currency | ororg.springframework.beans.propertyeditors.CurrencyEditor   |
 
-   
-
 5. 自定义PropertyEditor扩展
+
+   扩展模式：扩展java.beans.PropertyEditorSupport类
+
+   实现org.springframework.beans.PropertyEditorRegistrar#registerCustomEditors(PropertyEditorRegistry registry)
+
+   向org.springframework.beans.PropertyEditorRegistrar注册自定义PropertyEditor实现
+
+   org.springframework.beans.PropertyEditorRegistry#registerCustomEditor(java.lang.Class<?>, java.lang.String, java.beans.PropertyEditor)
 
 6. Spring PropertyEditor的设计缺陷
 

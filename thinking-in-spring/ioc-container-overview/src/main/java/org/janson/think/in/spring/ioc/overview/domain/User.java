@@ -8,6 +8,7 @@ import org.springframework.core.io.Resource;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import java.util.List;
+import java.util.Properties;
 
 /**
  * @Description: 用户类
@@ -23,6 +24,15 @@ public class User implements BeanNameAware {
     private List<City> lifeCities;
     private Resource configFileLocation;
     private Company company;
+    private Properties context;
+
+    public Properties getContext() {
+        return context;
+    }
+
+    public void setContext(Properties context) {
+        this.context = context;
+    }
 
     public Company getCompany() {
         return company;
