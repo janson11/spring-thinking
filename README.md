@@ -1775,6 +1775,14 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 6. Spring 4.2 泛型优化实现—ResolvableType
 
+   核心API：org.springframework.core.ResolvableType
+
+   - 起始版本：[4.0,)
+   - 扮演角色：GenericTypeResolver和GenericCollectionTypeResolver替代者
+   - 工厂方法：for* 方法
+   - 转换方法：as*方法
+   - 处理方法：resolve*方法
+
 7. ResolvableType的局限性
 
 8. 面试题精选
