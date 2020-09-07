@@ -1711,6 +1711,28 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 2. Java 5 类型接口
 
+   java.lang.reflect.Type
+
+   | 派生类或接口                        | 说明                                  |
+   | ----------------------------------- | ------------------------------------- |
+   | java.lang.Class                     | Javal类API，如java.lang.String        |
+   | java.lang.reflect.GenericArrayType  | 泛型数组类型                          |
+   | java.lang.reflect.ParameterizedType | 泛型参数类型                          |
+   | java.lang.reflect.TypeVariable      | 泛型类型变量 ，如果Collection<E>中的E |
+   | java.lang.reflect.WildcardType      | 泛型通配类型                          |
+
+   泛型反射API
+
+   | 类型                             | API                                  |
+   | -------------------------------- | ------------------------------------ |
+   | 泛型信息（Generics info）        | java.lang.Class#getGenericInfo       |
+   | 泛型参数（Parameters）           | java.lang.reflect.ParameterizedType  |
+   | 泛型父类（Super Classes）        | java.lang.Class#getGenericSuperclass |
+   | 泛型接口（Interfaces）           | java.lang.Class#getGenericInterfaces |
+   | 泛型声明（Generics Declaration） | java.lang.reflect.GenericDeclaration |
+
+   
+
 3. Spring泛型类型辅助类
 
 4. Spring泛型集合类型辅助类
