@@ -1785,4 +1785,8 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 7. ResolvableType的局限性
 
+   局限一：ResolvableType无法处理泛型擦写
+
+   局限二：ResolvableType无法处理非具体化的ParameterizedType
+
 8. 面试题精选
