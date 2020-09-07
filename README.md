@@ -1753,6 +1753,26 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 5. Spring方法参数封装—MethodParameter
 
+   核心API：org.springframework.core.MethodParameter
+
+   - 版本支持：[2.0,)
+
+   - 元信息：
+
+     关联的方法：Method
+
+     关联的构造器：Constructor
+
+     构造器或方法参数索引：parameterIndex
+
+     构造器或方法参数类型：parameterType
+
+     构造器或方法参数泛型类型：genericParameterType
+
+     构造器或方法参数参数名称：parameterName
+
+     所在的类：containingClass
+
 6. Spring 4.2 泛型优化实现—ResolvableType
 
 7. ResolvableType的局限性
