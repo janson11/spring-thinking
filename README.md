@@ -1790,3 +1790,58 @@ BeanDefinition注册-BeanDefinitionRegistry
    局限二：ResolvableType无法处理非具体化的ParameterizedType
 
 8. 面试题精选
+
+
+
+### Spring事件
+
+1. Java 事件/监听器编程模型
+
+   设计模式—观察者模式扩展
+
+   - 可观察者对象（消息发送者）-java.util.Observable
+
+   - 观察者：-java.util.Observer
+
+  标准化接口 
+
+-   事件对象:-java.util.EventObject
+-  事件监听器：-java.util.EventListener
+
+2. 面向接口的事件/监听器设计模式
+
+3. 面向注解的事件/监听器设计模式
+
+4. Spring标准事件—ApplicationEvent
+
+5. 基于接口的Spring事件监听器
+
+6. 基于注解的Spring事件监听器
+
+7. 注册Spring ApplicationListener
+
+8. Spring事件发布器
+
+9. Spring层次性上下文事件传播
+
+10. Spring内建事件
+
+11. Spring 4.2 Payload事件
+
+12. 自定义Spring事件
+
+13. 依赖注入ApplicationEventPublisher
+
+14. 依赖查找ApplicationEventMulticaster
+
+15. ApplicationEventPublisher底层实现
+
+16. 同步和异步Spring事件广播
+
+17. Spring 4.1事件异常处理
+
+18. Spring事件/监听器实现原理
+
+19. 课外资料
+
+20. 面试题精选
