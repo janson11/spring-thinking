@@ -1731,9 +1731,23 @@ BeanDefinition注册-BeanDefinitionRegistry
    | 泛型接口（Interfaces）           | java.lang.Class#getGenericInterfaces |
    | 泛型声明（Generics Declaration） | java.lang.reflect.GenericDeclaration |
 
+3. Spring泛型类型辅助类
+
+   核心API：org.springframework.core.GenericTypeResolver
+
+   - 版本支持：[2.5.2,)
+
+   - 处理类型相关（Type）相关方法：resolveReturnType和resolveType
+
+   - 处理泛型参数类型(ParameterizedType)相关方法：resolveReturnTypeArgument、resolveTypeArgument和resolveTypeArguments
+
+   - 处理泛型类型变量（TypeVariable）相关方法：getTypeVariableMap
+
+     
+
    
 
-3. Spring泛型类型辅助类
+   
 
 4. Spring泛型集合类型辅助类
 
