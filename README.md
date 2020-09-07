@@ -1740,16 +1740,16 @@ BeanDefinition注册-BeanDefinitionRegistry
    - 处理类型相关（Type）相关方法：resolveReturnType和resolveType
 
    - 处理泛型参数类型(ParameterizedType)相关方法：resolveReturnTypeArgument、resolveTypeArgument和resolveTypeArguments
-
    - 处理泛型类型变量（TypeVariable）相关方法：getTypeVariableMap
 
-     
-
-   
-
-   
-
 4. Spring泛型集合类型辅助类
+
+   核心API：org.springframework.core.GenericCollectionTypeResolver
+
+   - 版本支持：[2.0,4.3]
+   - 替换实现：org.springframework.core.ResolvableType
+   - 处理Collection相关：getCollection*Type
+   - 处理Map相关：getMapKey*Type、getMapValue*Type
 
 5. Spring方法参数封装—MethodParameter
 

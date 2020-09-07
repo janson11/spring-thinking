@@ -53,7 +53,4 @@ public class GenericTypeResolverDemo {
         System.out.println(typeVariableMap);
     }
 
-    static class StringList extends ArrayList<String> {// 泛型参数具体化（字节码有记录）
-
-    }
 }
