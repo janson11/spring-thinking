@@ -262,6 +262,22 @@ BeanWrapper是基于JavaBeans的二次封装，有且仅有一个实现类BeanWr
 
 
 
+### 35、Spring类型转换实现有哪些？
+
+1. 基于JavaBeans PropertyEditor接口实现
+2. Spring 3.0+ 通用类型转换实现
+
+### 36、Spring类型转换器接口有哪些？
+
+- 类型转换接口：org.springframework.core.convert.converter.Converter
+- 通用类型转换接口：org.springframework.core.convert.converter.GenericConverter
+- 类型条件接口：org.springframework.core.convert.converter.ConditionalConverter
+- 综合类型转换接口：org.springframework.core.convert.converter.ConditionalGenericConverter
+
+### 37、TypeDescriptor是如何处理泛型？
+
+下章揭晓
+
 
 
 
