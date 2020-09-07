@@ -278,7 +278,22 @@ BeanWrapper是基于JavaBeans的二次封装，有且仅有一个实现类BeanWr
 
 下章揭晓
 
+### 38、Java泛型擦写发生在编译时还是运行时？
+
+运行时
+
+### 39、请介绍Java 5 Type类型的派生类或接口？
+
+- java.lang.Class
+- java.lang.reflect.GenericArrayType
+-  java.lang.reflect.TypeVariable
+-  java.lang.reflect.ParameterizedType
+-  java.lang.reflect.WildcardType
 
 
 
+### 40、请说明ResolvableType的设计优势
 
+- 简化Java 5 Type API开发，屏蔽复杂API的运用，如ParameterizedType
+- 不变性设计(Immutability)
+- Fluent API 设计(Builder模式)、链式（流式）编程
