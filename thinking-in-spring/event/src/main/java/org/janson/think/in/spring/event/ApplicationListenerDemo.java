@@ -1,6 +1,8 @@
 package org.janson.think.in.spring.event;
 
 import org.springframework.context.ApplicationEvent;
+import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.context.ApplicationEventPublisherAware;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.event.ContextRefreshedEvent;
@@ -15,7 +17,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
  * @Date: 2020/9/8 19:55
  **/
 @EnableAsync
-public class ApplicationListenerDemo {
+public class ApplicationListenerDemo implements ApplicationEventPublisherAware {
 
     public static void main(String[] args) {
 //        GenericApplicationContext context = new GenericApplicationContext();
@@ -40,6 +42,13 @@ public class ApplicationListenerDemo {
         context.start();
         // 关闭 Spring应用上下文
         context.close();
+    }
+
+    @Override
+    public void setApplicationEventPublisher(ApplicationEventPublisher applicationEventPublisher) {
+        applicationEventPublisher.publishEvent(new ApplicationEvent("Hello,World") {
+        });
+        applicationEventPublisher.publishEvent("Hello,World");
     }
 
 

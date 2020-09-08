@@ -1878,6 +1878,14 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 8. Spring事件发布器
 
+   方法一：通过ApplicationEventPublisher发布Spring事件
+
+   ​			获取ApplicationEventPublisher：依赖注入
+
+   方法二：通过ApplicationEventMulticaster发布Spring事件
+
+   ​			获取ApplicationEventMulticaster：依赖注入、依赖查找。
+
 9. Spring层次性上下文事件传播
 
 10. Spring内建事件
