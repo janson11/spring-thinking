@@ -1810,6 +1810,17 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 2. 面向接口的事件/监听器设计模式
 
+   事件/监听器场景举例
+
+   | Java技术规范    | 事件接口                              | 监听器接口                               |
+   | --------------- | ------------------------------------- | ---------------------------------------- |
+   | JavaBeans       | java.beans.PropertyChangeEvent        | java.beans.PropertyChangeListener        |
+   | Java AWT        | java.awt.event.MouseEvent             | java.awt.event.MouseListener             |
+   | Java Swing      | javax.swing.event.MenuEvent           | javax.swing.event.MenuListener           |
+   | Java Preference | java.util.prefs.PreferenceChangeEvent | java.util.prefs.PreferenceChangeListener |
+
+   
+
 3. 面向注解的事件/监听器设计模式
 
 4. Spring标准事件—ApplicationEvent
