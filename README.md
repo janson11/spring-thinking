@@ -1819,9 +1819,19 @@ BeanDefinition注册-BeanDefinitionRegistry
    | Java Swing      | javax.swing.event.MenuEvent           | javax.swing.event.MenuListener           |
    | Java Preference | java.util.prefs.PreferenceChangeEvent | java.util.prefs.PreferenceChangeListener |
 
-   
-
 3. 面向注解的事件/监听器设计模式
+
+   事件/监听器注解场景举例
+
+   | Java技术规范 | 事件注解                       | 监听器注解                            |
+   | ------------ | ------------------------------ | ------------------------------------- |
+   | Servlet 3.0+ |                                | @javax.servlet.annotation.WebListener |
+   | JPA 1.0+     | @javax.persistence.PostPersis  |                                       |
+   | Java Common  | @PostConstruct                 |                                       |
+   | EJB 3.0+     | @javax.ejb.PrePassivate        |                                       |
+   | JSF 2.0+     | @javax.faces.event.ListenerFor |                                       |
+
+   
 
 4. Spring标准事件—ApplicationEvent
 
