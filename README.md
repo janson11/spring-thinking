@@ -1860,6 +1860,16 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 6. 基于注解的Spring事件监听器
 
+   Spring注解：org.springframework.context.event.EventListener
+
+   | 特性                 | 说明                                     |
+   | -------------------- | ---------------------------------------- |
+   | 设计特点             | 支持多ApplicationEvent类型，无须接口约束 |
+   | 注解目标             | 方法                                     |
+   | 是否支持异步执行     | 支持                                     |
+   | 是否支持泛型类型事件 | 支持                                     |
+   | 是否支持顺序控制     | 支持，配合@Order注解控制                 |
+
 7. 注册Spring ApplicationListener
 
 8. Spring事件发布器

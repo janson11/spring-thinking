@@ -2,21 +2,31 @@ package org.janson.think.in.spring.event;
 
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
-import org.springframework.context.support.GenericApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.context.event.EventListener;
+import org.springframework.core.annotation.Order;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 /**
  * @Description: {@link org.springframework.context.ApplicationListener} 示例
  * @Author: Janson
  * @Date: 2020/9/8 19:55
  **/
+@EnableAsync
 public class ApplicationListenerDemo {
 
     public static void main(String[] args) {
-        GenericApplicationContext context = new GenericApplicationContext();
+//        GenericApplicationContext context = new GenericApplicationContext();
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+        // 将引导类ApplicationListenerDemo作为Configuration Class
+        context.register(ApplicationListenerDemo.class);
+        // 方法一：基于Spring接口：向Spring应用上下文注册事件
         context.addApplicationListener(new ApplicationListener<ApplicationEvent>() {
             @Override
             public void onApplicationEvent(ApplicationEvent event) {
-                System.out.println("接收到Spring事件：" + event);
+                println("ApplicationListener—接收到Spring事件：" + event);
             }
         });
 
@@ -26,7 +36,30 @@ public class ApplicationListenerDemo {
         context.start();
         // 关闭 Spring应用上下文
         context.close();
-
     }
+
+    @EventListener
+    @Order(1)
+    //越小越先执行
+    public void onApplicationEvent(ContextRefreshedEvent event) {
+        println("@EventListener(onApplicationEvent2)—接收到Spring ContextRefreshedEvent");
+    }
+
+    @EventListener
+    @Order(2)
+    public void onApplicationEvent1(ContextRefreshedEvent event) {
+        println("@EventListener(onApplicationEvent1)—接收到Spring ContextRefreshedEvent");
+    }
+
+    @EventListener
+    @Async
+    public void onApplicationEventAsync(ContextRefreshedEvent event) {
+        println("@EventListener—接收到Spring ContextRefreshedEvent");
+    }
+
+    private static void println(Object printable) {
+        System.out.printf("[线程:%s]:%s\n", Thread.currentThread().getName(), printable);
+    }
+
 
 }
