@@ -1831,9 +1831,23 @@ BeanDefinition注册-BeanDefinitionRegistry
    | EJB 3.0+     | @javax.ejb.PrePassivate        |                                       |
    | JSF 2.0+     | @javax.faces.event.ListenerFor |                                       |
 
-   
-
 4. Spring标准事件—ApplicationEvent
+
+   Java标准事件：java.util.EventObject扩展
+
+   ​	扩展特性：事件发生事件戳
+
+   Spring应用上下文ApplicationEvent扩展—ApplicationContextEvent
+
+   ​	Spring应用上下文(ApplicatonEvent)作为事件源
+
+   ​    具体实现：org.springframework.context.event.ContextClosedEvent
+
+   ​			org.springframework.context.event.ContextRefreshedEvent
+
+   ​			org.springframework.context.event.ContextStartedEvent
+
+   ​			org.springframework.context.event.ContextStoppedEvent
 
 5. 基于接口的Spring事件监听器
 
