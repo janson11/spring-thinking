@@ -1872,6 +1872,10 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 7. 注册Spring ApplicationListener
 
+   方法一：ApplicationListener作为Spring Bean注册
+
+   方法二：通过ConfigurableApplicationContext API注册
+
 8. Spring事件发布器
 
 9. Spring层次性上下文事件传播
