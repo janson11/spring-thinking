@@ -1888,6 +1888,10 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 9. Spring层次性上下文事件传播
 
+   发生说明：当Spring应用出现多层次Spring应用上下文(ApplicationContext)时，如Spring WebMVC、Spring Boot或Spring Cloud场景下，由子ApplicationContext发起Spring事件可能会传递到其Parent ApplicationContext(直到Root)的过程。
+
+   如何避免：定位Spring事件源(ApplicationContext)进行过滤处理。
+
 10. Spring内建事件
 
 11. Spring 4.2 Payload事件
