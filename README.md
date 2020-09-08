@@ -1851,6 +1851,13 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 5. 基于接口的Spring事件监听器
 
+   Java标准事件监听器java.util.EventListener扩展
+
+   - 扩展接口：org.springframework.context.ApplicationListener
+   - 设计特点：单一类型事件处理
+   - 处理方法:onApplicationEvent(E event)
+   - 事件类型：org.springframework.context.ApplicationEvent
+
 6. 基于注解的Spring事件监听器
 
 7. 注册Spring ApplicationListener
