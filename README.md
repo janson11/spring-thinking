@@ -1911,6 +1911,10 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 12. 自定义Spring事件
 
+    - 扩展org.springframework.context.ApplicationEvent
+    - 实现org.springframework.context.ApplicationListener
+    - 注册org.springframework.context.ApplicationListener
+
 13. 依赖注入ApplicationEventPublisher
 
 14. 依赖查找ApplicationEventMulticaster
