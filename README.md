@@ -1903,6 +1903,12 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 11. Spring 4.2 Payload事件
 
+    Spring Payload事件：org.springframework.context.PayloadApplicationEvent
+
+    使用场景：简化Spring事件发送，关注事件源主体
+
+    发送方法：ApplicationEventPublisher#publishEvent(java.lang.Object)
+
 12. 自定义Spring事件
 
 13. 依赖注入ApplicationEventPublisher

@@ -4,6 +4,7 @@ import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ApplicationEventPublisherAware;
 import org.springframework.context.ApplicationListener;
+import org.springframework.context.PayloadApplicationEvent;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
@@ -51,6 +52,21 @@ public class ApplicationListenerDemo implements ApplicationEventPublisherAware {
         applicationEventPublisher.publishEvent(new ApplicationEvent("Hello,World") {
         });
         applicationEventPublisher.publishEvent("Hello,World");
+        applicationEventPublisher.publishEvent(new MyPayloadApplicationEvent(this, "Hello,World"));
+    }
+
+
+    static class MyPayloadApplicationEvent<String> extends PayloadApplicationEvent<String> {
+
+        public MyPayloadApplicationEvent(Object source, String payload) {
+            super(source, payload);
+        }
+    }
+
+    @EventListener
+    public void onPayloadApplicationEvent(PayloadApplicationEvent<String> event) {
+        println("onPayloadApplicationEvent -接收到Spring PayloadApplicationEvent：" + event);
+
     }
 
 
