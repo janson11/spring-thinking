@@ -1930,6 +1930,12 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 15. ApplicationEventPublisher底层实现
 
+    - 接口：org.springframework.context.event.ApplicationEventMulticaster
+
+    - 抽象类：org.springframework.context.event.AbstractApplicationEventMulticaster
+
+    - 实现类：org.springframework.context.event.SimpleApplicationEventMulticaster
+
 16. 同步和异步Spring事件广播
 
 17. Spring 4.1事件异常处理
