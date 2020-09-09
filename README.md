@@ -1917,6 +1917,10 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 13. 依赖注入ApplicationEventPublisher
 
+    通过ApplicationEventPublisherAware回调接口
+
+    通过@Autowired ApplicationEventPublisher
+
 14. 依赖查找ApplicationEventMulticaster
 
 15. ApplicationEventPublisher底层实现
