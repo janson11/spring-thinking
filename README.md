@@ -1923,6 +1923,11 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 14. 依赖查找ApplicationEventMulticaster
 
+    查找条件：
+
+    - Bean名称 "applicationEventMulticaster"
+    - Bean类型：org.springframework.context.event.ApplicationEventMulticaster
+
 15. ApplicationEventPublisher底层实现
 
 16. 同步和异步Spring事件广播
