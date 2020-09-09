@@ -1894,6 +1894,13 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 10. Spring内建事件
 
+    ApplicationContextEvent派生事件
+
+    - ContextRefreshedEvent：Spring应用上下文就绪事件
+    - ContextStartedEvent：Spring应用上下文启动事件
+    - ContextStoppedEvent：Spring应用上下文停止事件
+    - ContextClosedEvent：Spring应用上下文关闭事件
+
 11. Spring 4.2 Payload事件
 
 12. 自定义Spring事件

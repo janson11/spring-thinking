@@ -36,11 +36,13 @@ public class ApplicationListenerDemo implements ApplicationEventPublisherAware {
         // 通过Configuration Class来注册
         context.register(MyApplicationListener.class);
 
-        // 启动 Spring应用上下文
+        // 启动 Spring应用上下文 ContextRefreshedEvent
         context.refresh();
-        // 启动 Spring上下文
+        // 启动 Spring上下文 ContextStartedEvent
         context.start();
-        // 关闭 Spring应用上下文
+        // 提出Spring上下文 ContextStoppedEvent
+        context.stop();
+        // 关闭 Spring应用上下文 ContextClosedEvent
         context.close();
     }
 
