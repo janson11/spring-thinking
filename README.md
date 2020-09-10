@@ -1938,6 +1938,26 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 16. 同步和异步Spring事件广播
 
+    基于实现类：org.springframework.context.event.SimpleApplicationEventMulticaster
+
+    模式切换：org.springframework.context.event.SimpleApplicationEventMulticaster#setTaskExecutor(java.util.concurrent.Executor)方法
+
+    ​		默认模式：同步
+
+    ​		异步模式：如：java.util.concurrent.ThreadPoolExecutor
+
+    设计缺陷：非基于接口契约编程
+
+    基于注解：org.springframework.context.event.EventListener
+
+    模式切换：
+
+      模式模式：同步
+
+      异步模式：标注@org.springframework.scheduling.annotation.Async
+
+    实现限制：无法直接实现同步/异步动态切换
+
 17. Spring 4.1事件异常处理
 
 18. Spring事件/监听器实现原理
