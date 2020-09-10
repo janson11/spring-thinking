@@ -1960,6 +1960,19 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 17. Spring 4.1事件异常处理
 
+    Spring 3.0 错误处理接口：org.springframework.util.ErrorHandler
+
+    使用场景：	
+
+    ​	Spring 事件（Events）
+
+    ​    org.springframework.context.event.SimpleApplicationEventMulticaster Spring4.1开始支持
+
+    ​    Spring 本地调到（Scheduling）
+
+    ​    org.springframework.scheduling.concurrent.ConcurrentTaskScheduler
+    ​    org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler
+
 18. Spring事件/监听器实现原理
 
 19. 课外资料

@@ -41,7 +41,16 @@ public class AsyncEventListenerHandlerDemo {
                     executorService.shutdown();
                 }
             });
+
+            simpleApplicationEventMulticaster.setErrorHandler(t -> System.err.println("当Spring事件异常时，原因：" + t.getMessage()));
         }
+
+        context.addApplicationListener(new ApplicationListener<MySpringEvent>() {
+            @Override
+            public void onApplicationEvent(MySpringEvent event) {
+                throw new RuntimeException("故意抛出异常");
+            }
+        });
         context.publishEvent(new MySpringEvent("Hello world"));
         // 4、关闭Spring应用上下文
         context.close();
