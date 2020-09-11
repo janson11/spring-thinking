@@ -1975,6 +1975,20 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 18. Spring事件/监听器实现原理
 
+    核心类：org.springframework.context.event.SimpleApplicationEventMulticaster
+
+    设计模式：观察者模式扩展
+
+    被观察者：org.springframework.context.ApplicationListener：API添加和依赖查找
+
+    通知对象：org.springframework.context.ApplicationEvent
+
+    执行模式：同步/异步
+
+    异常处理：org.springframework.util.ErrorHandler
+
+    泛型处理：org.springframework.core.ResolvableType
+
 19. 课外资料
 
 20. 面试题精选
