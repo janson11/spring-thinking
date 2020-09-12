@@ -2017,18 +2017,54 @@ BeanDefinition注册-BeanDefinitionRegistry
 ### Spring注解
 
 1. Spring 注解驱动编程发展历程
+
    - 注解驱动启蒙时代：Spring Framework 1.x
    - 注解驱动过渡时代：Spring Framework 2.x
    - 注解驱动黄金时代：Spring Framework 3.x
    - 注解驱动完善时代：Spring Framework 4.x
    - 注解驱动当下时代：Spring Framework 5.x
+
 2. Spring 核心注解场景分类
+
+   Spring模式注解
+
+   | Spring注解     | 场景说明          | 起始版本 |
+   | -------------- | ----------------- | -------- |
+   | @Repository    | 数据仓储模式注解  | 2.0      |
+   | @Component     | 通用组件模式注解  | 2.5      |
+   | @Service       | 服务模式注解      | 2.5      |
+   | @Controller    | Web控制器模式注解 | 2.5      |
+   | @Configuration | 配置类模式注解    | 3.0      |
+   
+    装配注解
+
+   | Spring注解      | 场景说明                                | 起始版本 |
+   | --------------- | --------------------------------------- | -------- |
+   | @ImportResource | 替换XML元素<import>                     | 2.5      |
+   | @Import         | 导入Configuration类                     | 2.5      |
+   | @ComponentScan  | 扫描指定package下标注Spring模式注解的类 | 3.1      |
+   
+      依赖注入注解
+   
+   | Spring注解 | 场景说明                           | 起始版本 |
+| ---------- | ---------------------------------- | -------- |
+   | @Autowired | Bean依赖注入，支持多种依赖查找方式 | 2.5      |
+   | @Qualifier | 细粒度的@Autowired依赖查找         | 2.5      |
+   
 3. Spring注解编程模型
+
 4. Spring元注解（Meta—Annotations）
+
 5. Spring模式注解（Stereotype Annotations）
+
 6. Spring组合注解（Composed Annotations）
+
 7. Spring注解属性别名(Attribute Aliases)
+
 8. Spring 注解属性覆盖（Attribute Overrides）
+
 9. Spring @Enable模块驱动
+
 10. Spring条件注解
+
 11. 课外资料
