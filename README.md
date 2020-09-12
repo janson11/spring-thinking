@@ -2053,6 +2053,13 @@ BeanDefinition注册-BeanDefinitionRegistry
    
 3. Spring注解编程模型
 
+   编程模型
+
+   - 元注解（Meta—Annotations）
+   - Spring模式注解（Stereotype Annotations）
+   - Spring组合注解（Composed Annotations）
+   - Spring注解属性别名和覆盖(Attribute Overrides andAliases)
+
 4. Spring元注解（Meta—Annotations）
 
 5. Spring模式注解（Stereotype Annotations）
