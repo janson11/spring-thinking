@@ -297,3 +297,28 @@ BeanWrapper是基于JavaBeans的二次封装，有且仅有一个实现类BeanWr
 - 简化Java 5 Type API开发，屏蔽复杂API的运用，如ParameterizedType
 - 不变性设计(Immutability)
 - Fluent API 设计(Builder模式)、链式（流式）编程
+
+
+
+### 41、Spring事件核心接口/组件？
+
+Spring事件：org.springframework.context.ApplicationEvent
+
+Spring事件监听器：org.springframework.context.ApplicationListener
+
+Spring事件发布器：org.springframework.context.ApplicationEventPublisher
+
+Spring事件广播器：org.springframework.context.event.ApplicationEventMulticaster
+
+
+
+### 42、Spring同步和异步事件处理的使用场景？
+
+Spring同步事件：绝大多数Spring使用场景，如ContextRefreshedEvent
+
+Spring异步事件：主要@EventListener与@Asyc配合，实现异步处理，不阻塞主线程，比如长时间的数据计算任务等。不要轻易调整SimpleApplicationEventMulticaster中关联的taskExecutor对象，除非使用者非常了解Spring事件机制，否则容易出现异常行为。
+
+
+
+### 43、@EventListener的工作原理？
+

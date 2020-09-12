@@ -1991,4 +1991,26 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 19. 课外资料
 
+    Spring Boot事件
+
+    | 事件类型                            | 发生时机                              |
+    | ----------------------------------- | ------------------------------------- |
+    | ApplicationStartingEvent            | 当Spring Boot应用开始启动时           |
+    | ApplicationStartedEvent             | 当Spring Boot应用已启动时             |
+    | ApplicationEnvironmentPreparedEvent | 当Spring Boot Environment实例已准备时 |
+    | ApplicationPreparedEvent            | 当Spring Boot应用预备时               |
+    | ApplicationReadyEvent               | 当Spring Boot应用完全可用时           |
+    | ApplicationFailedEvent              | 当Spring Boot应用启动失败时           |
+
+    Spring Cloud事件
+
+    | 事件类型                   | 发生时机                            |
+    | -------------------------- | ----------------------------------- |
+    | EnvironmentChangeEvent     | 当Environment示例配置属性发生变化时 |
+    | HeartbeatEvent             | 当DiscoveryClient客户端发送心跳时   |
+    | InstancePreRegisteredEvent | 当服务实例注册前                    |
+    | InstanceRegisteredEvent    | 当服务实例注册后                    |
+    | RefreshEvent               | 当RefreshEndpoint被调用时           |
+    | RefreshScopeRefreshedEvent | 当Refresh Scope Bean刷新后          |
+
 20. 面试题精选
