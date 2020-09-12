@@ -2062,6 +2062,14 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 4. Spring元注解（Meta—Annotations）
 
+   一个注解标注在另外一个注解上，属性相互描述。
+
+   举例说明：java.lang.annotation.Documented
+
+   java.lang.annotation.Inherited
+
+   java.lang.annotation.Repeatable
+
 5. Spring模式注解（Stereotype Annotations）
 
 6. Spring组合注解（Composed Annotations）
