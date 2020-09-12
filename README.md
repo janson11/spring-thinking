@@ -2013,4 +2013,22 @@ BeanDefinition注册-BeanDefinitionRegistry
     | RefreshEvent               | 当RefreshEndpoint被调用时           |
     | RefreshScopeRefreshedEvent | 当Refresh Scope Bean刷新后          |
 
-20. 面试题精选
+
+### Spring注解
+
+1. Spring 注解驱动编程发展历程
+   - 注解驱动启蒙时代：Spring Framework 1.x
+   - 注解驱动过渡时代：Spring Framework 2.x
+   - 注解驱动黄金时代：Spring Framework 3.x
+   - 注解驱动完善时代：Spring Framework 4.x
+   - 注解驱动当下时代：Spring Framework 5.x
+2. Spring 核心注解场景分类
+3. Spring注解编程模型
+4. Spring元注解（Meta—Annotations）
+5. Spring模式注解（Stereotype Annotations）
+6. Spring组合注解（Composed Annotations）
+7. Spring注解属性别名(Attribute Aliases)
+8. Spring 注解属性覆盖（Attribute Overrides）
+9. Spring @Enable模块驱动
+10. Spring条件注解
+11. 课外资料
