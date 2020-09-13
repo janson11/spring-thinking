@@ -2173,3 +2173,21 @@ BeanDefinition注册-BeanDefinitionRegistry
          org.springframework.context.annotation.ConfigurationClassParser
 
 11. 课外资料
+
+    Spring Boot注解
+
+    | 注解                     | 场景说明                | 起始版本 |
+    | ------------------------ | ----------------------- | -------- |
+    | @SpringBootConfiguration | Spring Boot配置类       | 1.4.0    |
+    | @SpringBootApplication   | Spring Boot应用引导注解 | 1.2.0    |
+    | @EnableAutoConfiguartion | Spring Boot激活自动转配 | 1.0.0    |
+
+    Spring Cloud注解
+
+    | 注解                    | 场景说明                           | 起始版本 |
+    | ----------------------- | ---------------------------------- | -------- |
+    | @SpringCloudApplication | Spring Cloud应用引导注解           | 1.0.0    |
+    | @EnableDiscoveryClient  | Spring Cloud激活服务发现客户端注解 | 1.0.0    |
+    | @EnableCircuitBreaker   | Spring Cloud激活熔断注解           | 1.0.0    |
+
+    
