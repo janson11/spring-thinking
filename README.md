@@ -2112,6 +2112,8 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 6. Spring组合注解（Composed Annotations）
 
+   Spring组合注解的元注解允许是Spring模式注解与其他Spring功能性注解的任意组合。
+
 7. Spring注解属性别名(Attribute Aliases)
 
 8. Spring 注解属性覆盖（Attribute Overrides）
