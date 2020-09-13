@@ -2124,6 +2124,30 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 9. Spring @Enable模块驱动
 
+   @Enable模块驱动：是以@Enable为前缀的注解驱动编程模型。所谓"模块"是指具备相同领域的功能组件集合，组合所形成的一个独立的单元。比如Web MVC模块、AspectJ代理模块、Caching模块（缓存）、JMX（java管理扩展）模块、Async（异步处理）模块等。
+
+   举例说明：
+
+   - @EnableWebMvc
+   - @EnableTransactionManagement
+   - @EnableCaching
+   - @EnableMBeanExport
+   - @EnableAsync
+
+   @Enable模块驱动编程模式
+
+   - 驱动注解：@EnableXXX
+
+   - 导入注解：@Import具体实现
+
+   - 具体实现：
+
+     基于Configuration Class 
+
+     基于ImportSelector接口实现
+
+     基于ImportBeanDefinitionRegister接口实现
+
 10. Spring条件注解
 
 11. 课外资料
