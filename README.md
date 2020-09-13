@@ -2116,7 +2116,11 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 7. Spring注解属性别名(Attribute Aliases)
 
+   显示别名和隐性别名
+
 8. Spring 注解属性覆盖（Attribute Overrides）
+
+   显示覆盖和隐性覆盖
 
 9. Spring @Enable模块驱动
 

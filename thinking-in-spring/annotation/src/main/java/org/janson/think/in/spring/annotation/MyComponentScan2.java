@@ -21,11 +21,22 @@ public @interface MyComponentScan2 {
 
     @AliasFor(annotation = MyComponentScan.class, attribute = "scanBasePackages") //隐形别名
             // 多态，子注解提供新的属性方法引用"父"（元）注解中的属性方法
-            String[] scanBasePackages() default {};
+            String[] basePackages() default {};
     // @MyComponentScan2.basePackages
     // ->@MyComponentScan.scanBasePackages
     // -> @ComponentScan.basePackages
     // -> @ComponentScan.value
+
+    /**
+     * 与元注解 @MyComponentScan同名属性
+     *
+     * @return
+     */
+    String[] scanBasePackages() default {};
+
+
+    @AliasFor("scanBasePackages")
+    String[] packages() default {};// packages 覆盖了scanBasePackages 同时覆盖了元注解覆盖了scanBasePackages
 
 
 }
