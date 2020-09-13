@@ -1,7 +1,6 @@
 package org.janson.think.in.spring.annotation;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @Description: {@link org.springframework.stereotype.Component} 扫描示例
@@ -9,7 +8,9 @@ import org.springframework.context.annotation.ComponentScan;
  * @Date: 2020/9/12 21:48
  **/
 //指定Class-paths
-@ComponentScan(basePackages = " org.janson.think.in.spring.annotation")
+//@ComponentScan(basePackages = " org.janson.think.in.spring.annotation")
+//@ComponentScan(value = " org.janson.think.in.spring.annotation")
+@MyComponentScan2(scanBasePackages = "org.janson.think.in.spring.annotation")
 public class ComponentScanDemo {
 
     public static void main(String[] args) {
