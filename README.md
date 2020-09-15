@@ -2205,6 +2205,11 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 2. Spring Environment接口使用场景
 
+   - 用于属性占位符处理
+   - 用于转换Spring配置属性类型
+   - 用于存储Spring配置属性源（PropertySource）
+   - 用于Profiles状态的维护
+
 3. Environment 占位符处理
 
 4. 理解条件配置 Spring Profiles
