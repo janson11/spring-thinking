@@ -2212,6 +2212,18 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 3. Environment 占位符处理
 
+   Spring 3.1前占位符处理
+
+   组件：org.springframework.beans.factory.config.PropertyPlaceholderConfigurer
+
+   接口：org.springframework.util.StringValueResolver
+
+   Spring 3.1+占位符处理
+
+   组件：org.springframework.context.support.PropertySourcesPlaceholderConfigurer
+
+   接口：org.springframework.beans.factory.config.EmbeddedValueResolver
+
 4. 理解条件配置 Spring Profiles
 
 5. Spring 4 重构 @Profile
