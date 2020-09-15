@@ -320,5 +320,25 @@ Spring异步事件：主要@EventListener与@Asyc配合，实现异步处理，�
 
 
 
-### 43、@EventListener的工作原理？
+### 43、@EventListener的工作原理
+
+源码导读：org.springframework.context.event.EventListenerMethodProcessor
+
+
+
+### 44、Spring模式注解有哪些？
+
+- @org.springframework.stereotype.Component
+- org.springframework.stereotype.Repository
+- org.springframework.stereotype.Service
+- org.springframework.stereotype.Controller
+- org.springframework.context.annotation.Configuration
+
+### 45、@PropertySource的工作原理？
+
+
+
+
+
+
 
