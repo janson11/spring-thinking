@@ -2190,4 +2190,46 @@ BeanDefinition注册-BeanDefinitionRegistry
     | @EnableDiscoveryClient  | Spring Cloud激活服务发现客户端注解 | 1.0.0    |
     | @EnableCircuitBreaker   | Spring Cloud激活熔断注解           | 1.0.0    |
 
-    
+
+
+
+### Spring Environment抽象
+
+1. 理解Spring Environment 抽象
+
+   - 统一的Spring配置属性管理：Spring Framework 3.1 开始引入Environment抽象，它统一Spring配置属性的存储，包括占位符处理和类型转换，不仅完整地替换PropertyPlaceholderConfigurer，而且还支持更丰富的配置属性源（PropertySource）
+
+   - 条件化Spring Bean 装配管理
+
+     通过Environment Profiles信息，帮助Spring容器提供条件化装配Bean。
+
+2. Spring Environment接口使用场景
+
+3. Environment 占位符处理
+
+4. 理解条件配置 Spring Profiles
+
+5. Spring 4 重构 @Profile
+
+6. 依赖注入 Environment 
+
+7. 依赖查找 Environment 
+
+8. 依赖注入 @Value
+
+9. Spring 类型转换在 Environment中的运用
+
+10. Spring 类型转换在@Value中的运用
+
+11. Spring 配置属性源 PropertySource
+
+12. Spring内建的配置属性源
+
+13. 基于注解扩展Spring 配置属性源
+
+14. 基于API扩展Spring 配置属性源
+
+15. 课外资料
+
+16. 面试题精选
+
