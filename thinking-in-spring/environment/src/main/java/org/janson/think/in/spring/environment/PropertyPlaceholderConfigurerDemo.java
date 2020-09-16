@@ -1,4 +1,4 @@
-package org.janson.think.in.spring.annotation;
+package org.janson.think.in.spring.environment;
 
 import org.janson.think.in.spring.ioc.overview.domain.User;
 import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;

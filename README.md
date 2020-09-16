@@ -2246,6 +2246,18 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 6. 依赖注入 Environment 
 
+   - 直接依赖注入：
+
+     通过EnvironmentAware接口回调
+
+     通过@Autowired注入Environment
+
+   - 间接依赖注入
+
+     通过ApplicationContextAware接口回调
+
+     通过@Autowired注入ApplicationContext
+
 7. 依赖查找 Environment 
 
 8. 依赖注入 @Value
