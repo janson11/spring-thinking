@@ -2240,6 +2240,10 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 5. Spring 4 重构 @Profile
 
+   基于Spring 4 org.springframework.context.annotation.Condition接口实现
+
+   ​    org.springframework.context.annotation.ProfileCondition
+
 6. 依赖注入 Environment 
 
 7. 依赖查找 Environment 
