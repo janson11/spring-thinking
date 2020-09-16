@@ -23,7 +23,8 @@ public class ProfileDemo {
         // 默认的profiles
         environment.setDefaultProfiles("odd");
         // 增加活跃的profiles
-        environment.setActiveProfiles("even");
+//        environment.setActiveProfiles("even");
+        //    -Dspring.profiles.active=even
 
         // 启动Spring 应用上下文
         context.refresh();
@@ -31,6 +32,8 @@ public class ProfileDemo {
         Integer number = context.getBean("number", Integer.class);
         System.out.println(number);
         // 关闭Spring 应用上下文
+        // spring.profiles.active
+
         context.close();
     }
 

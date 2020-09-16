@@ -2226,6 +2226,18 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 4. 理解条件配置 Spring Profiles
 
+   Spring 3.1 条件配置
+
+    API：org.springframework.core.env.ConfigurableEnvironment
+
+   - 修改：addActiveProfile(String profile)、setActiveProfiles(String... profiles)和setDefaultProfiles(String... profiles)
+
+   - 获取：getActiveProfiles()和getDefaultProfiles()
+
+   - 匹配：acceptsProfiles(String... profiles)和acceptsProfiles(Profiles profiles)
+
+​      注解：org.springframework.context.annotation.Profile
+
 5. Spring 4 重构 @Profile
 
 6. 依赖注入 Environment 
