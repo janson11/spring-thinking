@@ -2276,6 +2276,16 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 9. Spring 类型转换在 Environment中的运用
 
+   Environment底层实现
+
+   - 底层实现：org.springframework.core.env.PropertySourcesPropertyResolver
+
+     核心方法：<T> T convertValueIfNecessary(Object value, @Nullable Class<T> targetType)
+
+   - 底层服务：org.springframework.core.convert.ConversionService
+
+     默认实现：org.springframework.core.convert.support.DefaultConversionService
+
 10. Spring 类型转换在@Value中的运用
 
 11. Spring 配置属性源 PropertySource
