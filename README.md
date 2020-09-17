@@ -2337,6 +2337,20 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 13. 基于注解扩展Spring 配置属性源
 
+    org.springframework.context.annotation.PropertySource实现原理：
+
+    入口：org.springframework.context.annotation.ConfigurationClassParser#doProcessConfigurationClass
+
+    org.springframework.context.annotation.ConfigurationClassParser#processPropertySource
+
+    4.3 新增语义
+
+    - 配置属性字符编码—encoding
+
+    - org.springframework.core.io.support.PropertySourceFactory
+
+   适配对象：org.springframework.core.env.CompositePropertySource
+
 14. 基于API扩展Spring 配置属性源
 
 15. 课外资料
