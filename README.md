@@ -2288,6 +2288,20 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 10. Spring 类型转换在@Value中的运用
 
+    @Value底层实现
+
+    底层实现：org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor
+
+    ​     org.springframework.beans.factory.support.DefaultListableBeanFactory#doResolveDependency
+
+    底层服务：org.springframework.beans.TypeConverter
+
+    默认实现：org.springframework.beans.TypeConverterDelegate
+
+    - java.beans.PropertyEditor
+
+    - org.springframework.core.convert.ConversionService
+
 11. Spring 配置属性源 PropertySource
 
 12. Spring内建的配置属性源
