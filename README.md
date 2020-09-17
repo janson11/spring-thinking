@@ -2270,6 +2270,10 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 8. 依赖注入 @Value
 
+   通过注入@Value
+
+   实现：org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor
+
 9. Spring 类型转换在 Environment中的运用
 
 10. Spring 类型转换在@Value中的运用
