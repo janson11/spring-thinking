@@ -2324,6 +2324,17 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 12. Spring内建的配置属性源
 
+    内建PropertySource
+
+    | PropertySource类型                                           | 说明                 |
+    | ------------------------------------------------------------ | -------------------- |
+    | org.springframework.core.env.CommandLinePropertySource       | 命令行配置属性源     |
+    | org.springframework.jndi.JndiPropertySource                  | JNDI配置属性源       |
+    | org.springframework.core.env.PropertiesPropertySource        | Properties配置属性源 |
+    | org.springframework.web.context.support.ServletConfigPropertySource | Servlet配置属性源    |
+    | org.springframework.core.env.SystemEnvironmentPropertySource | 环境变量配置属性源   |
+    | 。。。                                                       | 。。。               |
+
 13. 基于注解扩展Spring 配置属性源
 
 14. 基于API扩展Spring 配置属性源
