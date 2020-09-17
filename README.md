@@ -2260,6 +2260,14 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 7. 依赖查找 Environment 
 
+   - 直接依赖查找：
+
+     org.springframework.context.ConfigurableApplicationContext#ENVIRONMENT_BEAN_NAME
+
+   - 间接依赖查找
+
+     org.springframework.context.ConfigurableApplicationContext#getEnvironment
+
 8. 依赖注入 @Value
 
 9. Spring 类型转换在 Environment中的运用
