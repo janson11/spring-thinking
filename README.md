@@ -2352,8 +2352,8 @@ BeanDefinition注册-BeanDefinitionRegistry
    适配对象：org.springframework.core.env.CompositePropertySource
 
 14. 基于API扩展Spring 配置属性源
-
+    - Spring应用上下文启动前装配PropertySource
+    - Spring应用上下文启动后装配PropertySource
 15. 课外资料
-
 16. 面试题精选
 
