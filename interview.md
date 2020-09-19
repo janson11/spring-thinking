@@ -338,6 +338,30 @@ Spring异步事件：主要@EventListener与@Asyc配合，实现异步处理，�
 
 
 
+### 46、简单介绍Spring Environment接口？
+
+- 核心接口：org.springframework.core.env.Environment
+
+- 父接口：org.springframework.core.env.PropertyResolver
+
+- 可配置接口：org.springframework.core.env.ConfigurableEnvironment
+
+- 职责：
+
+  管理Spring配置属性源
+
+  管理Profiles
+
+### 47、如何控制PropertySource的优先级？
+
+通过API：propertySources.addFirst(propertySource);
+
+### 48、Environment完整的生命周期是怎样的？
+
+
+
+
+
 
 
 
