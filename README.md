@@ -2379,6 +2379,26 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 2. BeanFactory创建阶段
 
+   AbstractApplicationContext#obtainFreshBeanFactory()方法
+
+   - 刷新Spring应用上下文底层BeanFactory——refreshBeanFactory()
+
+     销毁或关闭BeanFactory，如果存在的话
+
+     创建BeanFactory—createBeanFactory()
+
+     设置BeanFactory Id
+
+     设置“是否允许BeanDefinition重复定义” —customizeBeanFactory(DefaultListableBeanFactory)
+
+     设置“是否允许循环引用（依赖）”—customizeBeanFactory(DefaultListableBeanFactory)
+
+     加载BeanDefinition -loadBeanDefinition(DefaultListableBeanFactory)
+
+     关联新建BeanFactory到Spring应用上下文
+
+   - 返回Spring应用上下文底层BeanFactory—getBeanFactory()
+
 3. BeanFactory准备阶段
 
 4. BeanFactory后置处理阶段
