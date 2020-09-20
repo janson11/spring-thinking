@@ -2362,3 +2362,48 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 16. 面试题精选
 
+
+
+### Spring应用上下文生命周期
+
+1. Spring应用上下文启动准备阶段
+
+   ​	AbstractApplicationContext#prepareRefresh()方法
+
+   - 启动时间：startupDate
+   - 状态标识：closed(false)、active(true)
+   - 初始化PropertySources -initPropertySources
+   - 检验Environment中必须属性
+   - 初始化事件监听器集合
+   - 初始化早期Spring事件集合
+
+2. BeanFactory创建阶段
+
+3. BeanFactory准备阶段
+
+4. BeanFactory后置处理阶段
+
+5. BeanFactory注册BeanPostProcessor阶段
+
+6. 初始化内建Bean：MessageSource
+
+7. 初始化内建Bean：Spring事件广播器
+
+8. Spring应用上下文刷新阶段
+
+9. Spring事件监听器注册阶段
+
+10. BeanFactory初始化完成阶段
+
+11. Spring应用上下文启动完成阶段
+
+12. Spring应用上下文启动阶段
+
+13. Spring应用上下文停止阶段
+
+14. Spring应用上下文关闭阶段
+
+15. 面试题精选
+
+16. 结束语
+
