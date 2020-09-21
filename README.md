@@ -2426,7 +2426,15 @@ BeanDefinition注册-BeanDefinitionRegistry
    - 注册LoadTimeWeaverAwareProcessor
 
 
-5.  BeanFactory注册BeanPostProcessor阶段
+5. BeanFactory注册BeanPostProcessor阶段
+
+   AbstractApplicationContext#registerBeanPostProcessors(ConfigurableListableBeanFactory beanFactory) 
+
+   - 注册PriorityOrdered类型的BeanPostProcessor Beans
+   - 注册Ordered类型的BeanPostProcessor Beans
+   - 注册普通 BeanPostProcessor Beans
+   - 注册MergedBeanDefinitionPostProcessor Beans
+   - 注册ApplicationListenerDetector 对象
 
 6. 初始化内建Bean：MessageSource
 
