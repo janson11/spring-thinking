@@ -2450,6 +2450,20 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 8. Spring应用上下文刷新阶段
 
+   AbstractApplicationContext#onRefresh()方法
+
+   - 子类覆盖该方法
+
+     org.springframework.web.context.support.AbstractRefreshableWebApplicationContext#onRefresh()
+
+     org.springframework.web.context.support.GenericWebApplicationContext#onRefresh()
+
+     org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext#onRefresh()
+
+     org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext#onRefresh()
+
+     org.springframework.web.context.support.StaticWebApplicationContext#onRefresh()
+
 9. Spring事件监听器注册阶段
 
 10. BeanFactory初始化完成阶段
