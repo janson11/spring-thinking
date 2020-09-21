@@ -2474,6 +2474,15 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 10. BeanFactory初始化完成阶段
 
+    AbstractApplicationContext#finishBeanFactoryInitialization(ConfigurableListableBeanFactory beanFactory)方法
+
+    - BeanFactory关联ConversionService Bean，如果存在
+    - 添加StringValueResolver对象
+    - 依赖查找 LoadTimeWeaverAware Bean
+    - BeanFactory临时ClassLoader置为null
+    - BeanFactory冻结配置
+    - BeanFactory初始化非延迟单例Beans
+
 11. Spring应用上下文启动完成阶段
 
 12. Spring应用上下文启动阶段
