@@ -2438,6 +2438,10 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 6. 初始化内建Bean：MessageSource
 
+   org.springframework.context.support.AbstractApplicationContext#initMessageSource()方法
+
+    第十二章Spring国际化 MessageSource内建依赖
+
 7. 初始化内建Bean：Spring事件广播器
 
 8. Spring应用上下文刷新阶段
