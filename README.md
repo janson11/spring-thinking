@@ -2415,7 +2415,18 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 4. BeanFactory后置处理阶段
 
-5. BeanFactory注册BeanPostProcessor阶段
+   AbstractApplicationContext#postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) 
+
+   - 由子类覆盖改方法   
+   
+     AbstractApplicationContext#invokeBeanFactoryPostProcessors(ConfigurableListableBeanFactory beanFactory) 
+   
+   - 调用 BeanFactoryPostProcessor或BeanDefinitionRegistry后置处理方法
+   
+   - 注册LoadTimeWeaverAwareProcessor
+
+
+5.  BeanFactory注册BeanPostProcessor阶段
 
 6. 初始化内建Bean：MessageSource
 
