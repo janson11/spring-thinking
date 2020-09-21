@@ -2401,6 +2401,18 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 3. BeanFactory准备阶段
 
+   AbstractApplicationContext#prepareBeanFactory(ConfigurableListableBeanFactory beanFactory) 方法
+
+   - 关联ClassLoader
+   - 设置Bean表达式处理器
+   - 添加PropertyEditorRegistrar实现ResourceEditorRegistrar
+   - 添加Aware回调接口BeanPostProcessor实现ApplicationContextAwareProcessor
+   - 忽略Aware回调接口作为依赖注入接口
+   - 注册ResolvableDependency对象 BeanFactory、ResourceLoader、ApplicationEventPublisher和ApplicationContext
+   - 注册ApplicationListenerDetector
+   - 注册LoadTimeWeaverAwareProcessor
+   - 注册单例对象Environment、Java System Properties以及OS环境变量
+
 4. BeanFactory后置处理阶段
 
 5. BeanFactory注册BeanPostProcessor阶段
