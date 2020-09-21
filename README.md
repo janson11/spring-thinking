@@ -2466,6 +2466,12 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 9. Spring事件监听器注册阶段
 
+   AbstractApplicationContext#registerListeners()方法
+
+   - 添加当前应用上下文所关联的ApplicationListener对象(集合)
+   - 添加BeanFactory所注册的ApplicationListener Beans
+   - 广播早期Spring事件
+
 10. BeanFactory初始化完成阶段
 
 11. Spring应用上下文启动完成阶段
