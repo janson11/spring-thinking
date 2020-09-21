@@ -2444,6 +2444,10 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 7. 初始化内建Bean：Spring事件广播器
 
+   org.springframework.context.support.AbstractApplicationContext#initApplicationEventMulticaster()方法
+
+   回顾章节：第十七章Spring时间—ApplicationEventPublisher底层实现
+
 8. Spring应用上下文刷新阶段
 
 9. Spring事件监听器注册阶段
