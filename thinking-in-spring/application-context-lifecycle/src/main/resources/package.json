@@ -1,0 +1,16 @@
+[
+  {
+    "context": "org.springframework.context.annotation.AnnotationConfigApplicationContext@7c30a502",
+    "parent": null,
+    "beans": [
+      {
+        "bean": "liveBeansViewDemo",
+        "aliases": [],
+        "scope": "singleton",
+        "type": "org.janson.think.in.spring.application.context.lifecycle.LiveBeansViewDemo",
+        "resource": "null",
+        "dependencies": []
+      }
+    ]
+  }
+]
