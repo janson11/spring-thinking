@@ -2503,9 +2503,19 @@ BeanDefinition注册-BeanDefinitionRegistry
 
       启动Lifecycle Beans
 
-    - 发布Spring 应用上下文已经启动事件 ：ContextStartedEvent
+    - 发布Spring 应用上下文已启动事件 ：ContextStartedEvent
 
 13. Spring应用上下文停止阶段
+
+    AbstractApplicationContext#stop()方法
+
+    - 启动LifecycleProcessor
+
+      依赖查找Lifecycle Beans
+
+      停止Lifecycle Beans
+
+    - 发布Spring 应用上下文已停止事件 ：ContextStopedEvent
 
 14. Spring应用上下文关闭阶段
 
