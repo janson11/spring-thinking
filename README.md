@@ -2485,6 +2485,14 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 11. Spring应用上下文启动完成阶段
 
+    AbstractApplicationContext#finishRefresh()方法
+
+    - 清除ResourceLoader缓存 -clearResourceCaches() since 5.0
+    - 初始化LifecycleProcessor对象 initLifecycleProcessor()
+    - 调用LifecycleProcessor#onRefresh()方法
+    - 发布Spring应用上下文已刷新事件 -ContextRefreshedEvent
+    - 向MBeanServer托管Live Beans
+
 12. Spring应用上下文启动阶段
 
 13. Spring应用上下文停止阶段
