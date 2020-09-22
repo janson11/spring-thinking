@@ -2495,6 +2495,16 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 12. Spring应用上下文启动阶段
 
+    AbstractApplicationContext#start()方法
+
+    - 启动LifecycleProcessor
+
+      依赖查找Lifecycle Beans
+
+      启动Lifecycle Beans
+
+    - 发布Spring 应用上下文已经启动事件 ：ContextStartedEvent
+
 13. Spring应用上下文停止阶段
 
 14. Spring应用上下文关闭阶段
