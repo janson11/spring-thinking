@@ -2519,6 +2519,29 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 14. Spring应用上下文关闭阶段
 
+    AbstractApplicationContext#close()方法
+
+    - 状态标识：active(false)、closed(true)
+
+    - Live Beans JMX 撤销托管
+      LiveBeansView.unregisterApplicationContext(ConfigurableApplicationContext applicationContext)
+
+    - 发布Spring应用上下文已关闭事件—ContextClosedEvent
+
+    - 关闭LifecycleProcessor
+
+      依赖查找Lifecycle Beans
+
+      停止 Lifecycle Beans
+
+    - 销毁Spring Beans
+
+    - 关闭BeanFactory
+
+    - 回调onClose()方法
+
+    - 注册Shutdown Hook线程（如果曾注册）
+
 15. 面试题精选
 
 16. 结束语
