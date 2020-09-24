@@ -358,6 +358,28 @@ Spring异步事件：主要@EventListener与@Asyc配合，实现异步处理，�
 
 ### 48、Environment完整的生命周期是怎样的？
 
+两个阶段：
+
+第一阶段：当我们的ApplicationContext（应用上下文）创建好之后，主动去set或者主动去填充或者自定义我们的Environment对象。
+
+第二阶段：我们可以使用实现EnvironmentAware接口进行回调，扩展PropertSource。
+
+### 49、Spring应用上下文生命周期有哪些阶段？
+
+- 刷新阶段：ConfigurableApplicationContext#refresh()
+
+- 启动阶段:ConfigurableApplicationContext#start()
+
+- 停止阶段:ConfigurableApplicationContext#stop()
+
+- 关闭阶段:ConfigurableApplicationContext#close()
+
+### 50、Spring应用上下文生命周期执行动作？
+
+org.springframework.context.support.AbstractApplicationContext#refresh()分析
+
+
+
 
 
 
