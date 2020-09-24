@@ -2546,3 +2546,17 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 16. 结束语
 
+
+
+### 加餐
+
+1、为什么说ObjectFactory提供的是延迟依赖查找？
+
+2、依赖查找（注入）的Bean会被缓存嘛？
+
+3、@Bean的处理流程是怎样的？
+
+4、BeanFactory是如何处理循环依赖的？
+
+5、MyBatis与Spring Framework是如何集成的？
+
