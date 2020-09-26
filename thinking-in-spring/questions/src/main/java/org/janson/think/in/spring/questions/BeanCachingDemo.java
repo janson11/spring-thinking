@@ -18,7 +18,7 @@ public class BeanCachingDemo {
 
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-
+        // 注册Config class
         context.register(BeanCachingDemo.class);
         context.refresh();
         BeanCachingDemo beanCachingDemo = context.getBean(BeanCachingDemo.class);
@@ -36,7 +36,7 @@ public class BeanCachingDemo {
     }
 
     @Bean
-    @Scope("prototype")
+    @Scope("prototype") // 原型Scope
     public static User user() {
         User user = new User();
         user.setId(1L);

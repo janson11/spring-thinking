@@ -2582,6 +2582,14 @@ application：当前Servlet应用内部缓存
 
 3、@Bean的处理流程是怎样的？
 
+解析范围：Configuration Class中的@Bean方法
+
+@Bean也会解析成一个BeanDefinition
+
+方法类型：静态@Bean方法和实例@Bean方法
+
+ConfigurationClassPostProcessor处理@Bean逻辑
+
 4、BeanFactory是如何处理循环依赖的？
 
 5、MyBatis与Spring Framework是如何集成的？
