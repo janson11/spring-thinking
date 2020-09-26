@@ -2552,6 +2552,16 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 1、为什么说ObjectFactory提供的是延迟依赖查找？
 
+ 原因：
+
+- ObjectFactory（或ObjectProvider）可关联某一类型Bean
+- ObjectFactory和ObjectProvider对象在被依赖注入和依赖查询时并未实时查找关联类型的Bean
+- 当ObjectFactory（或ObjectProvider）调用getObject()方法时，目标Bean才被依赖查找。
+
+总结 ：
+
+-  ObjectFactory（或ObjectProvider）相当于某一类型Bean依赖查找代理对象
+
 2、依赖查找（注入）的Bean会被缓存嘛？
 
 3、@Bean的处理流程是怎样的？
