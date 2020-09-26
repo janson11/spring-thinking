@@ -2608,3 +2608,11 @@ earlySingletonObjects.remove(beanName);
 
 5、MyBatis与Spring Framework是如何集成的？
 
+FactoryBean  基于XML与Annotation扩展。
+
+MapperScan注解
+
+org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider
+
+http://mybatis.org/spring/zh/getting-started.html
+
