@@ -2564,6 +2564,22 @@ BeanDefinition注册-BeanDefinitionRegistry
 
 2、依赖查找（注入）的Bean会被缓存嘛？
 
+单例Bean（Singleton）—会
+
+缓存位置：org.springframework.beans.factory.support.DefaultSingletonBeanRegistry#singletonObjects属性
+
+原型Bean（Prototype）—不会
+
+当依赖查询或依赖注入时，根据BeanDefinition每次创建
+
+其他Scope Bean
+
+request：每个ServletRequest内部缓存，生命周期维持在每次HTTP请求
+
+session：每个HTTPSession内部缓存，生命周期维持在每个用户HTTP会话
+
+application：当前Servlet应用内部缓存
+
 3、@Bean的处理流程是怎样的？
 
 4、BeanFactory是如何处理循环依赖的？
