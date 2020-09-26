@@ -2592,5 +2592,19 @@ ConfigurationClassPostProcessor处理@Bean逻辑
 
 4、BeanFactory是如何处理循环依赖的？
 
+预备知识：
+
+- 循环依赖开关（方法）：org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory#setAllowCircularReferences
+- 单例工程（属性）：org.springframework.beans.factory.support.DefaultSingletonBeanRegistry#singletonFactories
+- 获取早期未处理Bean（方法）：org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory#getEarlyBeanReference
+- 早期未处理Bean（属性）：org.springframework.beans.factory.support.DefaultSingletonBeanRegistry#earlySingletonObjects
+
+案例分析：三个Map
+
+singletonObjects.put(beanName, singletonObject);
+singletonFactories.remove(beanName);
+
+earlySingletonObjects.remove(beanName);
+
 5、MyBatis与Spring Framework是如何集成的？
 
